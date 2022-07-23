@@ -18,7 +18,7 @@ include_once('header.php');
 			<div class="blank-page">
 				
 				<div class="container mt-3">
-				  <h2>Manage car</h2>
+				  <h2>Manage cartype</h2>
 
 				  <table class="table">
 					<thead>

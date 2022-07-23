@@ -37,11 +37,12 @@ include_once('header.php');
 					</thead>
 					<tbody>
 					  <tr>
-						<td>John</td>
+						<td>1</td>
+						<td>john</td>
 						<td>john@example</td>
-						<td>9487</td>
-						<td>john@example.com</td>
-						<td>8736259818</td>
+						<td>7647</td>
+						<td>john71@.gmail</td>
+						<td>782627999</td>
 						<td>345265266667</td>
 						<td>767737888888838</td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>

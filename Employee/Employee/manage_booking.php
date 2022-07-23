@@ -7,7 +7,7 @@ include_once('header.php');
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Manage car</span>
+				<span>Manage booking</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -18,7 +18,7 @@ include_once('header.php');
 			<div class="blank-page">
 				
 				<div class="container mt-3">
-				  <h2>Manage car</h2>
+				  <h2>Manage booking</h2>
 
 				  <table class="table">
 					<thead>

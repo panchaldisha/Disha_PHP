@@ -7,7 +7,7 @@ include_once('header.php');
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Manage car</span>
+				<span>Manage payment</span>
 				</h2>
 		    </div>
 		<!--//banner-->
