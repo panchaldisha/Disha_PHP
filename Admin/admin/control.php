@@ -38,12 +38,39 @@ class control
 			include_once('manage_booking.php');
 			break;
 			
+			case '/manage_user':
+			include_once('manage_user.php');
+			break;
+			
+			
 			
 			case '/manage_car':
 			include_once('manage_car.php');
 			break;
 			
 			
+			case '/manage_contact':
+			include_once('manage_contact.php');
+			break;
+			
+			case '/manage_client':
+			include_once('manage_client.php');
+			break;
+			
+			case '/manage_emp':
+			include_once('manage_emp.php');
+			break;
+		
+			 
+			case '/manage_cartype':
+			include_once('manage_cartype.php');
+			break;
+			 
+			
+			case '/manage_location':
+			include_once('manage_location.php');
+			break; 
+			 
 			case '/manage_feedback':
 			include_once('manage_feedback.php');
 			break;
@@ -52,9 +79,7 @@ class control
 			include_once('manage_payment.php');
 			break;
 			
-			case '/add_client':
-			include_once('add_client.php');
-			break;
+			
 			
 			case '/add_client':
 			include_once('add_client.php');
