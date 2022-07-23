@@ -38,26 +38,24 @@ class control
 			
 			
 			case '/manage_car type':
-			include_once('manage_feedback.php');
+			include_once('manage_cartype.php');
 			break;
 			
 			case '/manage_payment':
 			include_once('manage_payment.php');
 			break;
 			
-			case '/add_client':
-			include_once('add_client.php');
+			
+			case '/manage_contact':
+			include_once('manage_contact.php');
 			break;
 			
-			case '/add_client':
-			include_once('add_client.php');
+			
+			case '/manage_user':
+			include_once('manage_user.php');
 			break;
+			
     
-			case '/add_emp':
-			include_once('add_emp.php');
-			break;
-        
-		   
     
   
    

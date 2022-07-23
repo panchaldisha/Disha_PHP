@@ -208,6 +208,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li>
                         <a href="dashboard" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Employee Dashboards</span> </a>
                     </li>
+					<li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Employee</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_emp.php" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Employee</a></li>
+                            
+                            <li><a href="manage_emp" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Employee</a></li>		
+					   </ul>
                    
                    
 					
@@ -228,10 +235,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <a href="manage_payment" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Payment</span> </a>
                     </li>
 					<li>
-                        <a href="manage_car.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Car</span> </a>
+                        <a href="manage_car" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Car</span> </a>
                     </li>
 					<li>
-                        <a href="manage_Car type.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Car type</span> </a>
+                        <a href="manage_cartype" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Car type</span> </a>
                     </li>
 					
                 </ul>

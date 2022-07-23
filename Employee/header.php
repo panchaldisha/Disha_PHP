@@ -206,7 +206,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="nav" id="side-menu">
 				
                     <li>
-                        <a href="dashboard.php" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Employee Dashboards</span> </a>
+                        <a href="dashboard" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Employee Dashboards</span> </a>
                     </li>
                    
                     <li>
@@ -214,30 +214,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <ul class="nav nav-second-level">
                             <li><a href="add_prod.php" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Product</a></li>
                             
-                            <li><a href="manage_prod.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Product</a></li>		
+                            <li><a href="manage_prod" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Product</a></li>		
 					   </ul>
                     </li>
 					
 					 <li>
-                        <a href="manage_user.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage User</span> </a>
+                        <a href="manage_user" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage User</span> </a>
                     </li>
 					 <li>
-                        <a href="manage_contact.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Contact</span> </a>
+                        <a href="manage_contact" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Contact</span> </a>
                     </li>
 					 <li>
-                        <a href="manage_booking.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage booking</span> </a>
+                        <a href="manage_booking" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage booking</span> </a>
                     </li>
 					<li>
-                        <a href="manage_payment.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage payment</span> </a>
+                        <a href="manage_payment" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage payment</span> </a>
                     </li>
 					<li>
-                        <a href="manage_car.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage car</span> </a>
+                        <a href="manage_car" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage car</span> </a>
                     </li>
 					<li>
-                        <a href="manage_cartype.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage cartype</span> </a>
+                        <a href="manage_cartype" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage cartype</span> </a>
                     </li>
 					<li>
-                        <a href="manage_location.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage location</span> </a>
+                        <a href="manage_location" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage location</span> </a>
                     </li>
 					
 					
