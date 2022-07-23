@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Taxas</title>
+<title>Rent a car</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -102,7 +102,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <h1> <a class="navbar-brand" href="dashboard.php">Taxas</a></h1>         
+               <h1> <a class="navbar-brand" href="dashboard">Rent a car</a></h1>         
 			   </div>
 			 <div class=" border-bottom">
         	<div class="full-left">
@@ -186,12 +186,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		              </ul>
 		            </li>
 					<li class="dropdown">
-		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Rackham<i class="caret"></i></span><img src="images/wo.jpg"></a>
+		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Disha<i class="caret"></i></span><img src="images/in6.jpg"></a>
 		              <ul class="dropdown-menu " role="menu">
-		                <li><a href="profile.html"><i class="fa fa-user"></i>Edit Profile</a></li>
-		                <li><a href="inbox.html"><i class="fa fa-envelope"></i>Inbox</a></li>
-		                <li><a href="calendar.html"><i class="fa fa-calendar"></i>Calender</a></li>
-		                <li><a href="inbox.html"><i class="fa fa-clipboard"></i>Tasks</a></li>
+		                <li><a href="profile"><i class="fa fa-user"></i>Edit Profile</a></li>
+		                <li><a href="inbox"><i class="fa fa-envelope"></i>Inbox</a></li>
+		                <li><a href="calendar"><i class="fa fa-calendar"></i>Calender</a></li>
+		                <li><a href="inbox"><i class="fa fa-clipboard"></i>Tasks</a></li>
 		              </ul>
 		            </li>
 		           
@@ -206,43 +206,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="nav" id="side-menu">
 				
                     <li>
-                        <a href="dashboard.php" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Employee Dashboards</span> </a>
+                        <a href="dashboard" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Employee Dashboards</span> </a>
                     </li>
                    
-                    <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Product</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="add_prod.php" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Product</a></li>
-                            
-                            <li><a href="manage_prod.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Product</a></li>		
-					   </ul>
-                    </li>
+                   
 					
 					 <li>
-                        <a href="manage_user.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage User</span> </a>
+                        <a href="manage_user" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage User</span> </a>
                     </li>
 					 <li>
-                        <a href="manage_contact.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Contact</span> </a>
-                    </li>
-					 <li>
-                        <a href="manage_booking.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage booking</span> </a>
-                    </li>
-					<li>
-                        <a href="manage_payment.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage payment</span> </a>
-                    </li>
-					<li>
-                        <a href="manage_car.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage car</span> </a>
-                    </li>
-					<li>
-                        <a href="manage_cartype.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage cartype</span> </a>
-                    </li>
-					<li>
-                        <a href="manage_location.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage location</span> </a>
+                        <a href="manage_contact" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Contact</span> </a>
                     </li>
 					
+					<li>
+                        <a href="manage_location.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Location</span> </a>
+                    </li>
+					<li>
+                        <a href="manage_booking" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Booking</span> </a>
+                    </li>
+					<li>
+                        <a href="manage_payment" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Payment</span> </a>
+                    </li>
+					<li>
+                        <a href="manage_car.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Car</span> </a>
+                    </li>
+					<li>
+                        <a href="manage_Car type.php" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Car type</span> </a>
+                    </li>
 					
-                    
-                    
                 </ul>
             </div>
 			</div>

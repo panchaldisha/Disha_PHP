@@ -8,7 +8,7 @@ include_once('header.php');
 				<h2>
 				<a href="dashboard.php">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Employee Dashboard</span>
+				<span>Dashboard</span>
 				</h2>
 		    </div>
 		<!--//banner-->	
