@@ -211,7 +211,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li>
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Employee</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="add_emp.php" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Employee</a></li>
+                            <li><a href="add_emp" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Employee</a></li>
+							
                             
                             <li><a href="manage_emp" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Employee</a></li>		
 					   </ul>
@@ -238,7 +239,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <a href="manage_cartype" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Cartype</span> </a>
                     </li>
                      <li>
-                        <a href="Add_client" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Add_client</span> </a>
+                        <a href="add_client" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Add_client</span> </a>
+                    </li>
+					 <li>
+                        <a href="add_cartype" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Add_cartype</span> </a>
                     </li>
 					
                 </ul>

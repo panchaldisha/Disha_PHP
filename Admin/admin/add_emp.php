@@ -17,11 +17,11 @@ include_once('header.php');
  		<div class="validation-form">
  	<!---->
   	    
-        <form>
+        <form action="" method="post" enctype="multipart/form-data">
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
               <label class="control-label">Name</label>
-              <input type="text" placeholder="Name" required="">
+              <input type="text" name="name" placeholder="name" required="">
             </div>
             
             <div class="clearfix"> </div>
@@ -29,29 +29,28 @@ include_once('header.php');
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Username</label>
-              <textarea class="form-control" placeholder="Username" required=""></textarea>
+              <textarea class="form-control" name="username" placeholder="Username" required=""></textarea>
+            </div>
+			 
+            <div class="col-md-12 form-group1 group-mail">
+              <label class="control-label">Email id</label>
+              <input type="text" name="emailid" placeholder="Email id" required="">
             </div>
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Password</label>
-              <input type ="password"placeholder="Password" required="">
+              <input type ="password" name="pass" placeholder="Password" required="">
             </div>
 			
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Address</label>
-              <textarea class="form-control" placeholder="address" required=""></textarea>
-            </div>
-			
-            
-            <div class="col-md-12 form-group1 group-mail">
-              <label class="control-label">Email id</label>
-              <input type="text" placeholder="Email id" required="">
+              <textarea class="form-control" name="address" placeholder="address" required=""></textarea>
             </div>
 			
 			<div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Contact No</label>
-              <input type="text" placeholder="Contact No" required="">
+              <input type="text" name="contactno" placeholder="Contact " required="">
             </div>
 
 

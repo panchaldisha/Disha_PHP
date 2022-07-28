@@ -59,6 +59,12 @@ class control
 			include_once('Add_client.php');
 			break;
 			
+			case '/add_cartype':
+			include_once('add_cartype.php');
+			break;
+			
+    
+			
     
     
   

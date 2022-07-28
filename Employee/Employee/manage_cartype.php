@@ -24,13 +24,9 @@ include_once('header.php');
 					<thead>
 					  <tr>
 					    <th>car_id</th>
-						<th>client_id</th>
-						<th>name</th>
-						<th>des</th>
-						<th>price</th>
-						<th>img</th>
-						<th>type</th>
-						<th>fuel_type</th>
+						<th>car_name</th>
+						<th>car_des</th>
+						<th>car_img</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
@@ -38,7 +34,7 @@ include_once('header.php');
 					<tbody>
 					  <tr>
 					    <td>1</td>
-						<td>2</td>
+						<td>SUV</td>
 						<td>John</td>
 						<td>nice car</td>
 						<td>700</td>

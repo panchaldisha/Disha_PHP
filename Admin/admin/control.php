@@ -1,10 +1,13 @@
 <?php
 
-class control
+include_once('model.php');
+
+class control extends model
 {
 	function __construct()
 	{
 		
+		model::__construct();
 		$path=$_SERVER['PATH_INFO'];
 		
 		switch($path)
@@ -22,11 +25,30 @@ class control
 			include_once('404.php');
 			break;
 			
-			case '/add_client':
-			include_once('add_client.php');
-			break;
+			
 			
 			case '/add_emp':
+			if(isset($_REQUEST['submit']))
+			{
+				$name=$_REQUEST['name'];
+				$username=$_REQUEST['username'];
+				$emailid=$_REQUEST['emailid'];
+				$pass=$_REQUEST['pass'];
+				$pass=md5($pass);
+				$address=$_REQUEST['address'];
+				$contact=$_REQUEST['contact'];
+				$arr=array("name"=>$name,"username"=>$username,"emailid"=>$emailid,"pass"=>$pass,"address"=>$address,"contact"=>$contact);
+				$res=$this->insert('employee',$arr);
+				if($res)
+				{
+				
+					echo "<script> alert('Register Success') </script>";
+				}
+               else
+			   {
+                    echo "Not success";				   
+			   }				   
+			}	
 			include_once('add_emp.php');
 			break;
 			
@@ -43,10 +65,16 @@ class control
 			break;
 			
 			
+			case '/add_client':
+			include_once('add_client.php');
+			break;
+			
+			
 			
 			case '/manage_car':
 			include_once('manage_car.php');
 			break;
+			
 			
 			
 			case '/manage_contact':
@@ -60,12 +88,7 @@ class control
 			case '/manage_emp':
 			include_once('manage_emp.php');
 			break;
-		
-			 
-			case '/manage_cartype':
-			include_once('manage_cartype.php');
-			break;
-			 
+	
 			
 			case '/manage_location':
 			include_once('manage_location.php');
@@ -79,21 +102,9 @@ class control
 			include_once('manage_payment.php');
 			break;
 			
-			
-			
-			case '/add_client':
-			include_once('add_client.php');
+			case '/manage_cartype':
+			include_once('manage_cartype.php');
 			break;
-    
-			case '/add_emp':
-			include_once('add_emp.php');
-			break;
-        
-		   
-    
-  
-   
-    
 		}
 		
 	}

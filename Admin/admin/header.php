@@ -213,8 +213,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Employee</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li><a href="add_emp" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Employee</a></li>
+							
                             
                             <li><a href="manage_emp" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Employee</a></li>		
+					   </ul>
+                    </li>
+					<li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Client</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_emp" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Client</a></li>
+							
+                            
+                            <li><a href="manage_client" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>manage client</a></li>		
 					   </ul>
                     </li>
 					
@@ -227,6 +237,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					 <li>
                         <a href="manage_feedback" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Feedback</span> </a>
                     </li>
+					
 					<li>
                         <a href="manage_location" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Location</span> </a>
                     </li>
@@ -240,15 +251,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <a href="manage_car" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Car</span> </a>
                     </li>
 					<li>
-                        <a href="manage_car type" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Car type</span> </a>
+                        <a href="manage_cartype" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Cartype</span> </a>
                     </li>
 					
 					<li>
-                        <a href="manage_client" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage client</span> </a>
+                        <a href="add_client" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Add_client</span> </a>
                     </li>
-					<li>
-                        <a href="Add_client" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Add client</span> </a>
-                    </li>
+					
+					
+
+					
+
+					
                 </ul>
             </div>
 			</div>

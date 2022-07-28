@@ -1,5 +1,4 @@
-<?php
-
+<?php	
 class control
 {
 	function __construct()
