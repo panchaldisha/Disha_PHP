@@ -29,7 +29,7 @@ include_once('header.php');
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Username</label>
-              <textarea class="form-control" name="username" placeholder="Username" required=""></textarea>
+              <input type="text" class="form-control" name="username" placeholder="Username" required="">
             </div>
 			 
             <div class="col-md-12 form-group1 group-mail">
@@ -50,31 +50,16 @@ include_once('header.php');
 			
 			<div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Contact No</label>
-              <input type="text" name="contactno" placeholder="Contact " required="">
-            </div>
-
-
-            
-             <div class="clearfix"> </div>
-            
-             <div class="clearfix"> </div>
-            <div class="vali-form">
-            
-            <div class="clearfix"> </div>
-            </div>
-             <div class="vali-form vali-form1">
-            
-            <div class="clearfix"> </div>
+              <input type="text" name="contact" placeholder="Contact " required="">
             </div>
              
-             <div class="clearfix"> </div>
            
              
          
              <div class="clearfix"> </div>
           
             <div class="col-md-12 form-group">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" name="submit" class="btn btn-primary">Submit</button>
               <button type="reset" class="btn btn-default">Reset</button>
             </div>
           <div class="clearfix"> </div>

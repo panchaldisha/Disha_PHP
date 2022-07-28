@@ -21,14 +21,14 @@ include_once('header.php');
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
               <label class="control-label">Name</label>
-              <input type="text" placeholder="Name" required="">
+              <input type="text" placeholder="Name" name="cat_name" required="">
             </div>
             
             <div class="clearfix"> </div>
             </div>
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Username</label>
+              <label class="control-label">Des</label>
               <textarea class="form-control" placeholder="Username" required=""></textarea>
             </div>
 			
