@@ -16,6 +16,7 @@ include_once('header.php');
 	
 
 			<div class="blank-page">
+			<div style="overflow:auto">
 				
 				<div class="table-responsive container mt-3">
 				  <h2>Manage Employee</h2>
@@ -27,7 +28,6 @@ include_once('header.php');
 						<th>name</th>
 						<th>user name</th>
 						<th>emailid</th>
-						<th>pass</th>
 						<th>add</th>
 						<th>contact</th>
 						<th>Edit</th>
@@ -35,22 +35,28 @@ include_once('header.php');
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+					foreach($employee_arr as $c)
+					{
+					?>	
 					  <tr>
-					    <th>1</td>
-						<td>John</td>
-						<td>john@example</td>
-						<td>john@example.com</td>
-						<td>9843</td>
-						<td>vatva</td>
-						<td>9837287882</td>
+					    <td><?php echo $c->emp_id;?></td>
+						<td><?php echo $c->name;?></td>
+						<td><?php echo $c->username;?></td>
+						<td><?php echo $c->emailid;?></td>
+						<td><?php echo $c->address;?></td>
+						<td><?php echo $c->contact;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
+					<?php
+					}
+					?>
 					  
 					</tbody>
 				  </table>
 				</div>
-				
+			</div>
 	        </div>
 	</div>
 	

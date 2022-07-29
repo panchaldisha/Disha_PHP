@@ -86,6 +86,7 @@ class control extends model
 			break;
 			
 			case '/manage_emp':
+			$employee_arr=$this->selectall('employee');
 			include_once('manage_emp.php');
 			break;
 	
