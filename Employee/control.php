@@ -1,5 +1,5 @@
 <?php
-
+include_once('../admin/model.php');
 class control
 {
 	function __construct()
@@ -55,9 +55,6 @@ class control
 			include_once('manage_user.php');
 			break;
 			
-			case '/Add_client':
-			include_once('Add_client.php');
-			break;
 			
 			case '/add_cartype':
 			include_once('add_cartype.php');

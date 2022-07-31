@@ -57,31 +57,61 @@ class control extends model
 			break;
 			
 			case '/manage_booking':
+			$booking_arr=$this->selectall('booking');
 			include_once('manage_booking.php');
 			break;
 			
 			case '/manage_user':
+			$customer_arr=$this->selectall('customer');
 			include_once('manage_user.php');
 			break;
 			
 			
 			case '/add_client':
+			if(isset($_REQUEST['submit']))
+			{
+				$name=$_REQUEST['name'];
+				$username=$_REQUEST['username'];
+				$password=$_REQUEST['password'];
+				$pass=md5($password);
+				$emailid=$_REQUEST['emailid'];
+				$contact=$_REQUEST['contact'];
+				$address=$_REQUEST['address'];
+				$ad=$_REQUEST['ad'];
+				$puc=$_REQUEST['puc'];
+				$dri=$_REQUEST['dri'];
+				$insu=$_REQUEST['insu'];
+				$arr=array("name"=>$name,"username"=>$username,"password"=>$pass,"emailid"=>$emailid,"contact"=>$contact,"address"=>$address,"ad"=>$ad,"puc"=>$puc,"dri"=>$dri,"insu"=>$insu);
+				$res=$this->insert('client',$arr);
+				if($res)
+				{
+				
+					echo "<script> alert('Register Success') </script>";
+				}
+               else
+			   {
+                    echo "Not success";				   
+			   }				   
+			}	
 			include_once('add_client.php');
 			break;
 			
 			
 			
 			case '/manage_car':
+			$car_arr=$this->selectall('car');
 			include_once('manage_car.php');
 			break;
 			
 			
 			
 			case '/manage_contact':
+			$contact_arr=$this->selectall('contact');
 			include_once('manage_contact.php');
 			break;
 			
 			case '/manage_client':
+			$client_arr=$this->selectall('client');
 			include_once('manage_client.php');
 			break;
 			
@@ -92,18 +122,22 @@ class control extends model
 	
 			
 			case '/manage_location':
+			$location_arr=$this->selectall('location');
 			include_once('manage_location.php');
 			break; 
 			 
 			case '/manage_feedback':
+			$feedback_arr=$this->selectall('feedback');
 			include_once('manage_feedback.php');
 			break;
 			
 			case '/manage_payment':
+			$payment_arr=$this->selectall('payment');
 			include_once('manage_payment.php');
 			break;
 			
 			case '/manage_cartype':
+			$cartype_arr=$this->selectall('category');
 			include_once('manage_cartype.php');
 			break;
 		}

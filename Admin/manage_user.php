@@ -7,7 +7,7 @@ include_once('header.php');
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Manage location</span>
+				<span>Manage User</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -15,28 +15,47 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
 				<div class="container mt-3">
-				  <h2>Manage location</h2>
+				  <h2>Manage User</h2>
 
 				  <table class="table">
 					<thead>
 					  <tr>
-						<th>location_id</th>
-						<th>location_name</th>
+					    <th>cus_id</th>
+						<th>name</th>
+						<th>username</th>
+						<th>pass</th>
+						<th>email</th>
+						<th>contact</th>
+						<th>ah</th>
+						<th>dl</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+					foreach($customer_arr as $c)
+					{
+					?>	
 					  <tr>
-						<td>1</td>
-						<td>rajendra</td>
+						<td><?php echo $c->cus_id;?></td>
+						<td><?php echo $c->name;?></td>
+						<td><?php echo $c->username;?></td>
+						<td><?php echo $c->pass;?></td>
+						<td><?php echo $c->email;?></td>
+						<td><?php echo $c->contact;?></td>
+						<td><?php echo $c->ah;?></td>
+						<td><?php echo $c->dri;?></td>
 						
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
+					  <?php
+					}
+					?>
 					  
 					</tbody>
 				  </table>

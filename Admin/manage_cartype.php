@@ -5,9 +5,9 @@ include_once('header.php');
  	<!--banner-->	
 		     <div class="banner">
 		    	<h2>
-				<a href="dashboard">Home</a>
+				<a href="dashboard.php">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Manage Contact</span>
+				<span>Manage cartype</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -15,31 +15,39 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
 				<div class="container mt-3">
-				  <h2>Manage Contact</h2>
+				  <h2>Manage cartype</h2>
 
 				  <table class="table">
 					<thead>
 					  <tr>
-					    <th>con_id</th>
-						<th>email</th>
-						<th>name</th>
-						<th>contact</th>
+					    <th>car_id</th>
+						<th>car_name</th>
+						<th>car_des</th>
+						<th>car_img</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+					foreach($cartype_arr as $c)
+					{
+					?>	
 					  <tr>
-					    <td>2</td>
-						<td>john@example.com</td>
-						<td>john</td>
-						<td>8746563789</td>
+					    <td><?php echo $c->cat_id;?></td>
+						<td><?php echo $c->cat_name;?></td>
+						<td><?php echo $c->cat_des;?></td>
+						<td><?php echo $c->cat_img;?></td>
+						
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
+					<?php
+					}
+					?>
 					  
 					</tbody>
 				  </table>

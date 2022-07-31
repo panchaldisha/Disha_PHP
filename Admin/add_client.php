@@ -7,7 +7,7 @@ include_once('header.php');
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Add cartype</span>
+				<span>Add client</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -21,62 +21,62 @@ include_once('header.php');
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
               <label class="control-label">Name</label>
-              <input type="text" placeholder="Name" name="cat_name" required="">
+              <input type="text" name="name" placeholder="Name" required="">
             </div>
             
             <div class="clearfix"> </div>
             </div>
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Des</label>
-              <textarea class="form-control" placeholder="Username" required=""></textarea>
+              <label class="control-label">Username</label>
+              <textarea class="form-control" name="username" placeholder="Username" required=""></textarea>
             </div>
 			
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">password</label>
-              <input type="password" class="form-control" placeholder="password" required="">
+              <input type="password" class="form-control" name="password" placeholder="password" required="">
             </div>
 			
 			
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">Address</label>
-              <textarea class="form-control" placeholder="address" required=""></textarea>
+              <label class="control-label">Email_id</label>
+              <textarea class="form-control" name="emailid" placeholder="emailid" required=""></textarea>
             </div>
 			
             
             <div class="col-md-12 form-group1 group-mail">
-              <label class="control-label">Email id</label>
-              <input type="text" placeholder="Email id" required="">
+              <label class="control-label">Contact</label>
+              <input type="text" name="contact" placeholder="contact" required="">
             </div>
 			
 			<div class="col-md-12 form-group1 group-mail">
-              <label class="control-label">contact no</label>
-              <input type="text" placeholder="contact no" required="">
+              <label class="control-label">Address</label>
+              <input type="text" name="address" placeholder="contact no" required="">
             </div>
 			
 						
 			<div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Adhar card no</label>
-              <input type="text" placeholder="Adhar card no" required="">
+              <input type="text" name="ad" placeholder="Adhar card no" required="">
             </div>
 						
 			<div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Driving licence</label>
-              <input type="text" placeholder="Driving licence" required="">
+              <input type="text"  name="dri" placeholder="Driving licence" required="">
             </div>
 			
 						
 			<div class="col-md-12 form-group1 group-mail">
               <label class="control-label">PUC NO</label>
-              <input type="text" placeholder="PUC NO" required="">
+              <input type="text" name="puc" placeholder="PUC NO" required="">
             </div>
 			
 						
 			<div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Insurance NO</label>
-              <input type="text" placeholder="Insurance NO" required="">
+              <input type="text" name="insu" placeholder="Insurance NO" required="">
             </div>
             
              <div class="clearfix"> </div>
@@ -84,7 +84,7 @@ include_once('header.php');
              <div class="clearfix"> </div>
           
             <div class="col-md-12 form-group">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" name="submit" class="btn btn-primary">Submit</button>
               <button type="reset" class="btn btn-default">Reset</button>
             </div>
           <div class="clearfix"> </div>

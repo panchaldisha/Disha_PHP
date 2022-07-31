@@ -7,7 +7,7 @@ include_once('header.php');
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Manage User</span>
+				<span>Manage car</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -18,40 +18,37 @@ include_once('header.php');
 			<div class="blank-page">
 				
 				<div class="container mt-3">
-				  <h2>Manage client</h2>
+				  <h2>Manage Payment</h2>
 
 				  <table class="table">
 					<thead>
 					  <tr>
-					    <th>client_id</th>
-						<th>name</th>
-						<th>username</th>
-						<th>pass</th>
-						<th>email</th>
-						<th>contact</th>
-						<th>ah</th>
-						<th>dl</th>
-						<th>PUC</th>
-						<th>insu</th>
+						<th>pay_id</th>
+						<th>pay_type</th>
+						<th>book_id</th>
+						<th>cus_id</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+					foreach($payment_arr as $c)
+					{
+					?>	
 					  <tr>
-					    <td>6</td>
-						<td>John</td>
-						<td>john@example</td>
-						<td>9487</td>
-						<td>john@example.com</td>
-						<td>8736259818</td>
-						<td>345265266667</td>
-						<td>767737888888838</td>
-						<td>73888</td>
-						<td>988899</td>
+					    <td><?php echo $c->pay_id;?></td>
+						<td><?php echo $c->pay_type;?></td>
+						<td><?php echo $c->book_id;?></td>
+						<td><?php echo $c->cus_id;?></td>
+						
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
+					<?php
+					}
+					?>
+					
 					  
 					</tbody>
 				  </table>
