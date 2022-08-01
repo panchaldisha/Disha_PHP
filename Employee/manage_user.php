@@ -35,6 +35,10 @@ include_once('header.php');
 						<th>Delete</th>
 					  </tr>
 					</thead>
+					<?php
+					foreach($manage_cartype_arr as $c)
+					{
+					?>	
 					<tbody>
 					  <tr>
 						<td>1</td>

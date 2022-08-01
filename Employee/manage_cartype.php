@@ -15,7 +15,7 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
 				<div class="container mt-3">
 				  <h2>Manage cartype</h2>
@@ -23,27 +23,32 @@ include_once('header.php');
 				  <table class="table">
 					<thead>
 					  <tr>
-					    <th>car_id</th>
-						<th>car_name</th>
-						<th>car_des</th>
-						<th>car_img</th>
+					    <th>cat_id</th>
+						<th>cat_name</th>
+						<th>cat_des</th>
+						<th>cat_img</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
+					<?php
+					foreach($manage_cartype_arr as $c)
+					{
+					?>	
 					<tbody>
 					  <tr>
-					    <td>1</td>
-						<td>SUV</td>
-						<td>John</td>
-						<td>nice car</td>
-						<td>700</td>
-						<td>https://www.autocarindia.com/cars/suv-cars-in-indi...</td>
-						<td>SUV</td>
-						<td>CNG</td>
+					    <td><?php echo $c->cat_id;?></td>
+						<td><?php echo $c->cat_name;?></td>
+						<td><?php echo $c->cat_des;?></td>
+						<td><img src="pic/<?php echo $c->cat_img;?>" width="50px" higth="40px" </td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
+					  <?php
+					  }
+					  ?>
+					
+					
 					  
 					</tbody>
 				  </table>

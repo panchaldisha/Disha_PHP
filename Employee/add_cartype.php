@@ -17,31 +17,27 @@ include_once('header.php');
  		<div class="validation-form">
  	<!---->
   	    
-        <form>
+        <form action="" method="post" enctype="multipart/form-data">
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
-              <label class="control-label">cat_id</label>
-              <input type="text" placeholder="cat_id" name="cat_id" required="">
+              <label class="control-label">Name</label>
+              <input type="text" placeholder="Name" name="cat_name" required="">
             </div>
             
             <div class="clearfix"> </div>
             </div>
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">cat_name</label>
-              <textarea class="form-control" placeholder="cat_name" name="cat_name" required=""></textarea>
+              <label class="control-label">Description</label>
+              <textarea class="form-control" placeholder="description" name="cat_des" required=""></textarea><br>
             </div>
 			
 			
 			<div class="col-md-12 form-group1">
-              <label class="control-label">cat_des</label>
-              <input type="password" class="form-control" placeholder="cat_des"  name="cat_des"required="">
+              <label class="control-label">Img</label>
+              <input type="file" class="form-control" placeholder="img" e  name="cat_img"required=""><br>
             </div>
 			
-			<div class="col-md-12 form-group1">
-              <label class="control-label">cat_img</label>
-              <input type="password" class="form-control" placeholder="cat_img"  name="cat_img"required="">
-            </div>
 			
 			
 			
@@ -51,7 +47,7 @@ include_once('header.php');
              <div class="clearfix"> </div>
           
             <div class="col-md-12 form-group">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" name="submit" class="btn btn-primary">Submit</button>
               <button type="reset" class="btn btn-default">Reset</button>
             </div>
           <div class="clearfix"> </div>
