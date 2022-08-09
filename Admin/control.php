@@ -1,21 +1,65 @@
 <?php
 
-include_once('model.php');
+include_once('../admin/model.php');
 
 class control extends model
 {
 	function __construct()
 	{
-		
+		session_start();
 		model::__construct();
 		$path=$_SERVER['PATH_INFO'];
 		
 		switch($path)
 		{
 			case '/index':
+			if(isset($_REQUEST['submit']))
+			{
+				$user_name=$_REQUEST['user_name'];
+				$pass=$_REQUEST['pass'];
+				$pass=md5($pass);
+	
+			
+				$where=array("user_name"=>$user_name,"pass"=>$pass);
+				
+				$run=$this->select_where('admin',$where);
+				
+				$res=$run->num_rows;
+				if($res==1)
+				{
+					
+					$_SESSION['email']=$email;
+					
+					echo "<script> 
+						alert('Login Success') 
+						window.location='dashboard';
+						</script>";
+					
+				}
+				else
+				{
+					echo "<script> 
+						alert('Login Failed due wrong credebntial') 
+						window.location='index';
+						</script>";
+				}	
+				
+				
+								
+			
+				
+			}
 			include_once('index.php');
 			break;
 			
+			
+			case '/logout':
+			unset($_SESSION['admin']);
+			echo "<script>
+			       alert('logout success')
+				   window.location='index';
+				   </script>";
+				   
 			case '/profile':
 			include_once('profile.php');
 			break;

@@ -4,10 +4,10 @@
 				<div class="col-md-4 ftr2-grid1">
 					<h3>About Us</h3>
 					<ul>
-						<li><a href="about.html">About</a></li>
-						<li><a href="services.html">Services</a></li>
-						<li><a href="gallery.html">Gallery</a></li>
-						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="about">About</a></li>
+						<li><a href="services">Services</a></li>
+						<li><a href="gallery">Gallery</a></li>
+						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
 				<div class="col-md-4 ftr2-grid2">

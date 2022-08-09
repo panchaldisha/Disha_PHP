@@ -10,7 +10,26 @@ include_once('header.php');
 					<h1><a href="index"><img src="images/car.png" alt=""/>AUTO <span>CARS</span></a></h1>
 				</div>
 				<div class="top_details">
-					<p><span></span> (880)123 2500</p>
+				<ul>
+				    <?php
+					if(isset($_SESSION['username'])) 
+				    {
+                    ?>
+					<li><a href="logout">logout</a></li>
+					<li><a href="signup">profile</a></li>
+					<?php
+					}
+					else
+					{
+					?>
+					
+					<li><a href="login">login</a></li>
+					<li><a href="signup">signup</a></li>
+					<?php
+					}
+					?>
+					</ul>
+					
 					<div class="search">
 						<form>
 							<input type="text" value="" placeholder="Search Location">

@@ -15,7 +15,7 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto>
 				
 				<div class="container mt-3">
 				  <h2>Manage car</h2>
@@ -37,7 +37,7 @@ include_once('header.php');
 					</thead>
 					<tbody>
 					<?php
-					foreach($booking_arr as $c)
+					foreach($manage_car_arr as $c)
 					{
 					?>	
 					  <tr>
@@ -45,7 +45,10 @@ include_once('header.php');
 						<td><?php echo $c->client_id;?></td>
 						<td><?php echo $c->name;?></td>
 						<td><?php echo $c->des;?></td>
-						<td><?php echo $c->book_time;?></td>
+						<td><?php echo $c->price;?></td>
+						<td><?php echo $c->img;?></td>
+						<td><?php echo $c->type;?></td>
+						<td><?php echo $c->fuel_type;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>

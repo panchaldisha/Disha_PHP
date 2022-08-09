@@ -35,6 +35,22 @@ class model
 			return $arr=array("data not found");
 		}
 	}
+	function select_where($tbl,$where)
+	{
+		$key_arr=array_keys($where); 
+		$value_arr=array_values($where);
+		
+		$sel="select * from $tbl where 1=1"; 
+		$i=0;
+		foreach($where as $w)
+		{
+			echo $sel.=" and $key_arr[$i]='$value_arr[$i]'";
+			$i++;
+		}
+		$run=$this->conn->query($sel);
+		return $run;
+		
+	}
 }
 $obj=new model;
 ?>

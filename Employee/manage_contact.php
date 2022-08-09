@@ -15,7 +15,7 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
 				<div class="container mt-3">
 				  <h2>Manage Contact</h2>
@@ -31,15 +31,22 @@ include_once('header.php');
 						<th>Delete</th>
 					  </tr>
 					</thead>
+					<?php
+					foreach($manage_contact_arr as $c)
+					{
+					?>	
 					<tbody>
 					  <tr>
-					    <td>2</td>
-						<td>john@example.com</td>
-						<td>john</td>
-						<td>8746563789</td>
+					    <td><?php echo $c->con_id;?></td>
+						<td><?php echo $c->email;?></td>
+						<td><?php echo $c->name;?></td>
+						<td><?php echo $c->contact;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
+					  <?php
+					  }
+					  ?>
 					  
 					</tbody>
 				  </table>

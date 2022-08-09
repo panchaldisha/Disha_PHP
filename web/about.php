@@ -10,7 +10,9 @@ include_once('header.php');
 					<h1><a href="index"><img src="images/car.png" alt=""/>AUTO <span>CARS</span></a></h1>
 				</div>
 				<div class="top_details">
-					<p><span></span> (880)123 2500</p>
+					
+					<li><a href="login">login</a></li>
+					<li><a href="signup">signup</a></li>
 					<div class="search">
 						<form>
 							<input type="text" value="" placeholder="Search Location">
@@ -18,6 +20,7 @@ include_once('header.php');
 						</form>
 					</div>
 				</div>
+					
 				<div class="clearfix"></div>
 			</div>
 			<nav class="navbar navbar-default">

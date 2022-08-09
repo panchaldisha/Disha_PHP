@@ -15,7 +15,7 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
 				<div class="container mt-3">
 				  <h2>Manage User</h2>
@@ -30,28 +30,31 @@ include_once('header.php');
 						<th>email</th>
 						<th>contact</th>
 						<th>ah</th>
-						<th>dl</th>
+						<th>dri</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
 					<?php
-					foreach($manage_cartype_arr as $c)
+					foreach($manage_user_arr as $c)
 					{
 					?>	
 					<tbody>
 					  <tr>
-						<td>1</td>
-						<td>john</td>
-						<td>john@example</td>
-						<td>7647</td>
-						<td>john71@.gmail</td>
-						<td>782627999</td>
-						<td>345265266667</td>
-						<td>767737888888838</td>
+						<td><?php echo $c->cus_id;?></td>
+						<td><?php echo $c->name;?></td>
+						<td><?php echo $c->username;?></td>
+						<td><?php echo $c->pass;?></td>
+						<td><?php echo $c->email;?></td>
+						<td><?php echo $c->contact;?></td>
+						<td><?php echo $c->ah;?></td>
+						<td><?php echo $c->dri;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
+					  <?php
+					  }
+					  ?>
 					  
 					</tbody>
 				  </table>
