@@ -24,7 +24,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	<div class="login">
 		<h1><a href="index">Rent a car </a></h1>
-		<h1><a href="index">Admin Login  </a></h1>
+		<h1><a href="index">Employee Login  </a></h1>
 		<div class="login-bottom">
 			<h2>Login</h2>
 			<form action="" method="post" enctype="multipat/form-data">

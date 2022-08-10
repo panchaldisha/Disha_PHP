@@ -10,9 +10,25 @@ include_once('header.php');
 					<h1><a href="index"><img src="images/car.png" alt=""/>AUTO <span>CARS</span></a></h1>
 				</div>
 				<div class="top_details">
+					<ul>
+				    <?php
+					if(isset($_SESSION['username'])) 
+				    {
+                    ?>
+					<button class="btn btn-light"><a href="logout">logout</a></button>
+					<button class="btn btn-light"><a href="signup">profile</a></button>
+					<?php
+					}
+					else
+					{
+					?>
 					
-					<li><a href="login">login</a></li>
-					<li><a href="signup">signup</a></li>
+					<button class="btn btn-light"><a href="login">login</a></button>
+					<button class="btn btn-light"><a href="signup">signup</a></button>
+					<?php
+					}
+					?>
+					</ul>
 					<div class="search">
 						<form>
 							<input type="text" value="" placeholder="Search Location">

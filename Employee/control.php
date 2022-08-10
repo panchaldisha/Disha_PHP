@@ -109,6 +109,14 @@ class control extends model
 			include_once('add_cartype.php');
 			break;
 			
+			case '/logout':
+			unset($_SESSION['employee']);
+			echo "<script>
+			       alert('logout success')
+				   window.location='index';
+				   </script>";
+			break;
+			
 			
 			
     

@@ -11,6 +11,11 @@ class control extends model
 		
 		switch($path)
 		{
+			
+			case '/profile':
+			include_once('profile.php');
+			break;
+			
 			case '/index':
 			include_once('index.php');
 			break;

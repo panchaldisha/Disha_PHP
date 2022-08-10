@@ -15,16 +15,16 @@ include_once('header.php');
 					if(isset($_SESSION['username'])) 
 				    {
                     ?>
-					<li><a href="logout">logout</a></li>
-					<li><a href="signup">profile</a></li>
+					<button class="btn btn-light"><a href="logout">logout</a></button>
+					<button class="btn btn-light"><a href="signup">profile</a></button>
 					<?php
 					}
 					else
 					{
 					?>
 					
-					<li><a href="login">login</a></li>
-					<li><a href="signup">signup</a></li>
+					<button class="btn btn-light"><a href="login">login</a></button>
+					<button class="btn btn-light"><a href="signup">signup</a></button>
 					<?php
 					}
 					?>
