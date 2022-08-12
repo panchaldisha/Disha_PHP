@@ -184,6 +184,121 @@ class control extends model
 			$cartype_arr=$this->selectall('category');
 			include_once('manage_cartype.php');
 			break;
+			
+			case '/delete':
+			
+			
+			if(isset($_REQUEST['del_cus_id']))
+			{
+				$cus_id=$_REQUEST['del_cus_id'];
+				$where=array("cus_id"=>$cus_id);
+				$res=$this->delete_where('customer',$where);
+				if($res) 
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_user';
+						</script>";
+				}
+			}
+
+			
+			if(isset($_REQUEST['del_con_id']))
+			{
+				$con_id=$_REQUEST['del_con_id'];
+				$where=array("con_id"=>$con_id);
+				$res=$this->delete_where('contact',$where);
+				if($res) 
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_contact';
+						</script>";
+				}
+			}
+			
+			
+			if(isset($_REQUEST['del_feed_id']))
+			{
+				$feed_id=$_REQUEST['del_feed_id'];
+				$where=array("feed_id"=>$feed_id);
+				$res=$this->delete_where('feedback',$where);
+				if($res) 
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_feedback';
+						</script>";
+				}
+			}
+			if(isset($_REQUEST['del_loc_id']))
+			{
+				$loc_id=$_REQUEST['del_loc_id'];
+				$where=array("loc_id"=>$loc_id);
+				$res=$this->delete_where('location',$where);
+				if($res) 
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_location';
+						</script>";
+				}
+			}
+			if(isset($_REQUEST['del_book_id']))
+			{
+				$book_id=$_REQUEST['del_book_id'];
+				$where=array("book_id"=>$book_id);
+				$res=$this->delete_where('booking',$where);
+				if($res) 
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_booking';
+						</script>";
+				}
+			}
+			
+			if(isset($_REQUEST['del_pay_id']))
+			{
+				$pay_id=$_REQUEST['del_pay_id'];
+				$where=array("pay_id"=>$pay_id);
+				$res=$this->delete_where('payment',$where);
+				if($res) 
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_payment';
+						</script>";
+				}
+			}
+			if(isset($_REQUEST['del_cat_id']))
+			{
+				$cat_id=$_REQUEST['del_cat_id'];
+				$where=array("cat_id"=>$cat_id);
+				$res=$this->delete_where('category',$where);
+				if($res) 
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_cartype';
+						</script>";
+				}
+			}
+			if(isset($_REQUEST['del_emp_id']))
+			{
+				$emp_id=$_REQUEST['del_emp_id'];
+				$where=array("emp_id"=>$emp_id);
+				$res=$this->delete_where('employee',$where);
+				if($res) 
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_emp';
+						</script>";
+				}
+			}
+			
+			
 		}
 		
 	}
