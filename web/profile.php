@@ -22,11 +22,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 	<div class="main">
-		<h1>Trendy Profile Widget</h1>
+		<h1>Profile</h1>
 		<div class="agile_main_grid">
 			<div class="agile_main_grid_left">
 				<div class="agile_main_grid_left1">
-					<h2>Trendy Profile</h2>
+					<h2>Profile</h2>
 				</div>
 				<div class="top-nav">
 				<span class="menu"><img src="images/menu.png" alt=""/></span>

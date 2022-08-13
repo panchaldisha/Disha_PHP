@@ -50,7 +50,10 @@ class control extends model
 				$res=$this->insert('customer',$arr);
 				if($res)
 				{
-					echo "<script> alert('Register Success') </script>";				
+					echo "<script> 
+					alert('Register Success') 
+					window.location='index';
+					</script>";				
 				}
 				else
 				{

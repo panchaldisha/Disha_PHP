@@ -35,7 +35,7 @@ include_once('header.php');
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Img</label>
-              <input type="file" class="form-control" placeholder="img" e  name="cat_img"required=""><br>
+              <input type="file" class="form-control" placeholder="img"   name="cat_img"required=""><br>
             </div>
 			
 			

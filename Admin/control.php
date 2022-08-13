@@ -297,6 +297,32 @@ class control extends model
 						</script>";
 				}
 			}
+			if(isset($_REQUEST['del_client_id']))
+			{
+				$client_id=$_REQUEST['del_client_id'];
+				$where=array("client_id"=>$client_id);
+				$res=$this->delete_where('client',$where);
+				if($res) 
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_client';
+						</script>";
+				}
+			}
+			if(isset($_REQUEST['del_car_id']))
+			{
+				$car_id=$_REQUEST['del_car_id'];
+				$where=array("car_id"=>$car_id);
+				$res=$this->delete_where('car',$where);
+				if($res) 
+				{
+					echo "<script> 
+						alert('Delete Success') 
+						window.location='manage_car';
+						</script>";
+				}
+			}
 			
 			
 		}
