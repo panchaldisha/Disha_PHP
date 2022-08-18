@@ -13,9 +13,45 @@ class control extends model
 		{
 			
 			case '/profile':
+			$where=array("username"=>$_SESSION['username']);
+			$run=$this->select_where('customer',$where);
+			$fetch=$run->fetch_object();
 			include_once('profile.php');
 			break;
 			
+			case'/editprofile':
+			if(isset($_REQUEST['edit_cus_id']))
+			{
+				$cus_id=$_REQUEST['edit_cus_id'];
+				$where=array("cus_id"=>$cus_id);
+				$run=$this->select_where('customer',$where);
+			    $fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					
+					$name=$_REQUEST['name'];
+					$username=$_REQUEST['username'];
+					$email=$_REQUEST['email'];
+					$contact=$_REQUEST['contact'];
+					$address=$_REQUEST['address'];
+					
+						$arr=array("name"=>$name,"username"=>$username,"email"=>$email,"contact"=>$contact,"address"=>$address);
+						$res=$this->update('customer',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='profile';
+							</script>";
+						}
+					}
+					
+				}	
+			
+			include_once('editprofile.php');
+			break;
+		
 			case '/index':
 			include_once('index.php');
 			break;
@@ -40,12 +76,16 @@ class control extends model
 			case '/signup':
 			if(isset($_REQUEST['submit']))
 			{
+				$name=$_REQUEST['name'];
 				$username=$_REQUEST['username'];
-				$pass=$_REQUEST['pass'];
-				$pass=md5($pass);
+				$password=$_REQUEST['pass'];
+				$pass=md5($password);
+				$email=$_REQUEST['email'];
+				$address=$_REQUEST['address'];
+				$contact=$_REQUEST['contact'];
 	
 			
-				$arr=array("username"=>$username,"pass"=>$pass);
+				$arr=array("name"=>$name,"username"=>$username,"pass"=>$pass,"email"=>$email,"address"=>$address,"contact"=>$contact);
 				
 				$res=$this->insert('customer',$arr);
 				if($res)

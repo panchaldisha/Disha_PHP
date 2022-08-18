@@ -55,30 +55,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="agile_main_grid_left_grid">
 								<div class="agile_main_grid_left2">
 									<img src="images/1.png" alt=" " />
-									<h3>Carl Rider <a href="mailto:info@example.com">@carldesigner.com</a></h3>
-									<p>UI / UX / PHP Developer</p>
+									
+                                    <h3>Id:<?php echo $fetch->cus_id;?></h3>
+									
+									<p>Name <?php echo $fetch->name;?></p>
 									<div class="agile_main_grid_left2_grid">
 										<div class="agile_main_grid_left2_grid_left">
-											<h4>Following</h4>
-											<h5>342</h5>
+											<h5>Username </h5>
+											<h6><?php echo $fetch->username;?></h6>
+										</div>
+										
+										<div class="agile_main_grid_left2_grid_left">
+											<h5>Email_id </h5>
+											<h6><?php echo $fetch->email;?> </h6>
 										</div>
 										<div class="agile_main_grid_left2_grid_left">
-											<h4>Posts</h4>
-											<h5>231</h5>
+											<h5>contact</h5>
+											<h6><?php echo $fetch->contact;?></h6>
 										</div>
 										<div class="agile_main_grid_left2_grid_left">
-											<h4>Followers</h4>
-											<h5>123</h5>
+											<h5>Address</h5>
+											<h6><?php echo $fetch->address;?></h6>
+											
 										</div>
 										<div class="clear"> </div>
 									</div>
 									<div class="agile_main_grid_left2_grid_bottom">
-										<a href="#">Follow</a>
+										<a href="editprofile?edit_cus_id=<?php echo $fetch->cus_id;?>">Edit</a>
 									</div>
 								</div>
 							</div>
 						</li>
-						<li>
+						<!--<li>
 							<div class="agile_main_grid_left_grid">
 								<div class="agile_main_grid_left2">
 									<img src="images/12.png" alt=" " />
@@ -131,10 +139,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									</div>
 								</div>
 							</div>
-						</li>
+						</li>-->
 					</ul>
 				</div>
 				</section>
+				
 				<!-- flexSlider -->
 					<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
 					<script defer src="js/jquery.flexslider.js"></script>
