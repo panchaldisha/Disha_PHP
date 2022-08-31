@@ -27,7 +27,6 @@ include_once('header.php');
 					    <th>client_id</th>
 						<th>name</th>
 						<th>username</th>
-						<th>password</th>
 						<th>emailid</th>
 						<th>contact</th>
 						<th>ah</th>
@@ -47,7 +46,6 @@ include_once('header.php');
 					    <td><?php echo $c->client_id;?></td>
 						<td><?php echo $c->name;?></td>
 						<td><?php echo $c->username;?></td>
-						<td><?php echo $c->password;?></td>
 						<td><?php echo $c->emailid;?></td>
 						<td><?php echo $c->contact;?></td>
 						<td><?php echo $c->address;?></td>

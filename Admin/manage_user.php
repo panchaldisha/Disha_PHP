@@ -26,13 +26,13 @@ include_once('header.php');
 					    <th>cus_id</th>
 						<th>name</th>
 						<th>username</th>
-						<th>pass</th>
 						<th>email</th>
 						<th>contact</th>
 						<th>ah</th>
 						<th>dl</th>
 						<th>Edit</th>
 						<th>Delete</th>
+						<th>status</th>
 					  </tr>
 					</thead>
 					<tbody>
@@ -44,15 +44,15 @@ include_once('header.php');
 						<td><?php echo $c->cus_id;?></td>
 						<td><?php echo $c->name;?></td>
 						<td><?php echo $c->username;?></td>
-						<td><?php echo $c->pass;?></td>
 						<td><?php echo $c->email;?></td>
 						<td><?php echo $c->contact;?></td>
 						<td><?php echo $c->ah;?></td>
 						<td><?php echo $c->dri;?></td>
 						
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="delete?del_cus_id=<?php echo $c->cus_id ?>" class="btn btn-danger">Delete</a></td>
-					  </tr>
+						<td><a href="delete?del_cus_id=<?php echo $c->cus_id;?>" class="btn btn-danger">Delete</a></td>
+						<td><a href="status?status_cus_id=<?php echo $c->cus_id;?>" class="btn btn-primary"><?php echo $c->status;?></a></td>
+					    </tr>
 					<?php
 					}
 					?>

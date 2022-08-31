@@ -324,6 +324,82 @@ class control extends model
 				}
 			}
 			
+			case '/status':
+			
+			if(isset($_REQUEST['status_cus_id']))
+			{
+				$cust_id=$_REQUEST['status_cus_id'];
+				$where=array("cus_id"=>$cust_id);
+				
+				$run=$this->select_where('customer',$where);
+				$fetch=$run->fetch_object();
+				$status=$fetch->status;
+				
+				if($status=="Block")
+				{
+					$arr=array("status"=>"Unblock");
+					$res=$this->update('customer',$arr,$where);
+					if($res) 
+					{
+						echo "<script> 
+							alert('Unblock Success') 
+							window.location='manage_user';
+							</script>";
+					}
+				}
+				else
+				{
+					$arr=array("status"=>"Block");
+					$res=$this->update('customer',$arr,$where);
+					if($res) 
+					{
+						unset($_SESSION['username']);
+						echo "<script> 
+							alert('Block Success') 
+							window.location='manage_user';
+							</script>";
+					}
+				}
+			}
+			
+			
+			if(isset($_REQUEST['status_emp_id']))
+			{
+				$cust_id=$_REQUEST['status_emp_id'];
+				$where=array("emp_id"=>$emp_id);
+				
+				$run=$this->select_where('employee',$where);
+				$fetch=$run->fetch_object();
+				$status=$fetch->status;
+				
+				if($status=="Block")
+				{
+					$arr=array("status"=>"Unblock");
+					$res=$this->update('employee',$arr,$where);
+					if($res) 
+					{
+						echo "<script> 
+							alert('Unblock Success') 
+							window.location='manage_emp';
+							</script>";
+					}
+				}
+				else
+				{
+					$arr=array("status"=>"Block");
+					$res=$this->update('employee',$arr,$where);
+					if($res) 
+					{
+						unset($_SESSION['employee']);
+						echo "<script> 
+							alert('Block Success') 
+							window.location='manage_emp';
+							</script>";
+					}
+				}
+			}
+				
+			     
 			
 		}
 		
