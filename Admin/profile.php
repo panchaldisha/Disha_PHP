@@ -1,4 +1,5 @@
 <?php
+
 include_once('header.php');
 ?>
  
@@ -18,14 +19,14 @@ include_once('header.php');
 			<h3><i class="fa fa-user"></i>Profile</h3>
 			<div class="profile-bottom-top">
 			<div class="col-md-4 profile-bottom-img">
-				<img src="images/pr.jpg" alt="">
+				<img src="images/pic.jpg" alt="">
 			</div>
 			<div class="col-md-8 profile-text">
-				<h6>Jack Dorsey</h6>
+				<h6>Id:</h6>
 				<table>
-				<tr><td>Department</td>  
+				<tr><td>Username</td>  
 				<td>:</td>  
-				<td>Web Designer</td></tr>
+				<td>username</td></tr>
 				
 				<tr>
 				<td>Email</td>

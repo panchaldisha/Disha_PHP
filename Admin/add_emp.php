@@ -1,6 +1,48 @@
 <?php
 include_once('header.php');
 ?>
+<script>
+function validate()
+{
+	var name=document.forms["empform"]["name"].value;
+	if(name=="" || name==null)
+	{
+		alert("Please fill out the name");
+		return false;
+	}
+	var username=document.forms["empform"]["username"].value;
+	if(username==""|| username==null)
+	{
+		alert("Please fill out the username");
+		return false;
+	}
+	var emailid=document.forms["empform"]["emailid"].value;
+	if(emailid==""|| emailid==null)
+	{
+		alert("Please fill out the emailid");
+		return false;
+	}
+	var pass=document.forms["empform"]["pass"].value;
+	if(pass==""|| pass==null)
+	{
+		alert("Please fill out the pass");
+		return false;
+	}
+	var address=document.forms["empform"]["address"].value;
+	if(address==""|| address==null)
+	{
+		alert("Please fill out the address");
+		return false;
+	}
+	var contact=document.forms["empform"]["contact"].value;
+	if(contact==""|| contact==null)
+	{
+		alert("Please fill out the contact");
+		return false;
+	}
+	
+}
+</script>
  
  	<!--banner-->	
 		   <div class="banner">
@@ -17,11 +59,11 @@ include_once('header.php');
  		<div class="validation-form">
  	<!---->
   	    
-        <form action="" method="post" enctype="multipart/form-data">
+        <form name="empform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
               <label class="control-label">Name</label>
-              <input type="text" name="name" placeholder="name" required="">
+              <input type="text" name="name" placeholder="name" >
             </div>
             
             <div class="clearfix"> </div>
@@ -29,28 +71,28 @@ include_once('header.php');
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Username</label>
-              <input type="text" class="form-control" name="username" placeholder="Username" required="">
+              <input type="text" class="form-control" name="username" placeholder="Username" >
             </div>
 			 
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Email id</label>
-              <input type="text" name="emailid" placeholder="Email id" required="">
+              <input type="text" name="emailid" placeholder="Email id" >
             </div>
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Password</label>
-              <input type ="password" name="pass" placeholder="Password" required="">
+              <input type ="password" name="pass" placeholder="Password" >
             </div>
 			
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Address</label>
-              <textarea class="form-control" name="address" placeholder="address" required=""></textarea>
+              <textarea class="form-control" name="address" placeholder="address" ></textarea>
             </div>
 			
 			<div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Contact No</label>
-              <input type="text" name="contact" placeholder="Contact " required="">
+              <input type="text" name="contact" placeholder="Contact " >
             </div>
              
            

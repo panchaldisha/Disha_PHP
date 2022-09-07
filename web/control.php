@@ -107,7 +107,7 @@ class control extends model
 			
 			case '/login':
 			if(isset($_REQUEST['submit']))
-			{	
+		    {	
 				$username=$_REQUEST['username'];
 				$password=$_REQUEST['pass'];
 				$pass=md5($password);
@@ -117,31 +117,38 @@ class control extends model
 				
 				$res=$run->num_rows; 
 				if($res==1) 
-				{
+			    {
 					    $data=$run->fetch_object();
 					    $status=$data->status;
 					    if($status=="Unblock")
 						{
 				
 					
-					       $_SESSION['username']=$username;
-					
-					       echo "<script> 
-						   alert('Login Success') 
-						   window.location='index';
-						   </script>";
+					          $_SESSION['username']=$username;
+					          echo "<script> 
+						      alert('Login Success') 
+						      window.location='index';
+						      </script>";
 						}
-					
-				
-				else
-				{
-					echo "<script> 
-						alert('Login Failed due wrong credential') 
-						window.location='index';
-						</script>";
+						
+						 else
+				        {
+					          echo "<script> 
+						      alert('Login Failed due to blocked') 
+						      window.location='login';
+						      </script>";
+				        }
 				}
+						
+		     	  else
+				        {
+					          echo "<script> 
+						          alert('Login Failed due wrong credentials') 
+						           window.location='index';
+						      </script>";
+				        }
 			}
-		}	
+			
 			include_once('login.php');
 			break;
 			
@@ -156,10 +163,10 @@ class control extends model
 			default:
 			include_once('404.php');
 			break;
-		
 		}
+	    
 		
-	}
+    }
 }
 $obj=new control;
 

@@ -42,12 +42,7 @@ class control extends model
 						alert('Login Failed due wrong credebntial') 
 						window.location='index';
 						</script>";
-				}	
-				
-				
-								
-			
-				
+				}			
 			}
 			include_once('index.php');
 			break;
@@ -61,6 +56,7 @@ class control extends model
 				   </script>";
 				   
 			case '/profile':
+			
 			include_once('profile.php');
 			break;
     
@@ -328,13 +324,11 @@ class control extends model
 			
 			if(isset($_REQUEST['status_cus_id']))
 			{
-				$cust_id=$_REQUEST['status_cus_id'];
-				$where=array("cus_id"=>$cust_id);
-				
+				$cus_id=$_REQUEST['status_cus_id'];
+				$where=array("cus_id"=>$cus_id);
 				$run=$this->select_where('customer',$where);
 				$fetch=$run->fetch_object();
 				$status=$fetch->status;
-				
 				if($status=="Block")
 				{
 					$arr=array("status"=>"Unblock");
@@ -365,13 +359,11 @@ class control extends model
 			
 			if(isset($_REQUEST['status_emp_id']))
 			{
-				$cust_id=$_REQUEST['status_emp_id'];
+				$emp_id=$_REQUEST['status_emp_id'];
 				$where=array("emp_id"=>$emp_id);
-				
 				$run=$this->select_where('employee',$where);
 				$fetch=$run->fetch_object();
 				$status=$fetch->status;
-				
 				if($status=="Block")
 				{
 					$arr=array("status"=>"Unblock");
@@ -380,7 +372,7 @@ class control extends model
 					{
 						echo "<script> 
 							alert('Unblock Success') 
-							window.location='manage_emp';
+							window.location='manage_employee';
 							</script>";
 					}
 				}
@@ -393,7 +385,7 @@ class control extends model
 						unset($_SESSION['employee']);
 						echo "<script> 
 							alert('Block Success') 
-							window.location='manage_emp';
+							window.location='manage_employee';
 							</script>";
 					}
 				}

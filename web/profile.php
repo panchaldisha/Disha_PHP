@@ -1,3 +1,15 @@
+<?php
+if(isset($_SESSION['username']))
+{
+	
+}
+else
+{
+	echo "<script>
+	window.location='index';
+	</script>";
+}
+?>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -7,7 +19,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Trendy Profile Widget Flat Responsive Widget Template :: w3layouts</title>
+<title>Profile</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
