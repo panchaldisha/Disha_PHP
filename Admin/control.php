@@ -1,7 +1,5 @@
 <?php
-
 include_once('../admin/model.php');
-
 class control extends model
 {
 	function __construct()
@@ -56,7 +54,9 @@ class control extends model
 				   </script>";
 				   
 			case '/profile':
-			
+			$where=array("email"=>$_SESSION['email']);
+			$run=$this->select_where('admin',$where);
+			$fetch=$run->fetch_object();
 			include_once('profile.php');
 			break;
     
@@ -180,6 +180,270 @@ class control extends model
 			$cartype_arr=$this->selectall('category');
 			include_once('manage_cartype.php');
 			break;
+			
+			case'/Editclient':
+			if(isset($_REQUEST['edit_client_id']))
+			{
+				$client_id=$_REQUEST['edit_client_id'];
+				$where=array("client_id"=>$client_id);
+				$run=$this->select_where('client',$where);
+			    $fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					
+					$name=$_REQUEST['name'];
+					$username=$_REQUEST['username'];
+					$Email=$_REQUEST['emailid'];
+					$contact=$_REQUEST['contact'];
+					$address=$_REQUEST['address'];
+					$ad=$_REQUEST['ad'];
+					$dri=$_REQUEST['dri'];
+					$puc=$_REQUEST['puc'];
+					$insu=$_REQUEST['insu'];
+					
+					
+						$arr=array("name"=>$name,"username"=>$username,"emailid"=>$emailid,"contact"=>$contact,"address"=>$address,"ad"=>$ad,"dri"=>$dri,"puc"=>$puc,"insu"=>$insu);
+						$res=$this->update('client',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='manage_client';
+							</script>";
+						}
+					}
+					
+				}	
+			
+			include_once('Editclient.php');
+			break;
+			
+			case'/Editemp':
+			if(isset($_REQUEST['edit_emp_id']))
+			{
+				$emp_id=$_REQUEST['edit_emp_id'];
+				$where=array("emp_id"=>$emp_id);
+				$run=$this->select_where('employee',$where);
+			    $fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$emp_id=$_REQUEST['emp_id'];
+					$name=$_REQUEST['name'];
+					$username=$_REQUEST['username'];
+					$emailid=$_REQUEST['emailid'];
+					$address=$_REQUEST['address'];
+					$contact=$_REQUEST['contact'];
+					
+					
+						$arr=array("emp_id"=>$emp_id,"name"=>$name,"username"=>$username,"emailid"=>$emailid,"address"=>$address,"contact"=>$contact);
+						$res=$this->update('employee',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='manage_emp';
+							</script>";
+						}
+					}
+					
+				}	
+			
+			include_once('Editemp.php');
+			break;
+			
+			
+			
+			case'/Edituser':
+			if(isset($_REQUEST['edit_cus_id']))
+			{
+				$cus_id=$_REQUEST['edit_cus_id'];
+				$where=array("cus_id"=>$cus_id);
+				$run=$this->select_where('customer',$where);
+			    $fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$cus_id=$_REQUEST['cus_id'];
+					$name=$_REQUEST['name'];
+					$username=$_REQUEST['username'];
+					$email=$_REQUEST['email'];
+					$contact=$_REQUEST['contact'];
+					$ah=$_REQUEST['ah'];
+					$dri=$_REQUEST['dri'];
+					$address=$_REQUEST['address'];
+					
+					
+					
+						$arr=array("cus_id"=>$cus_id,"name"=>$name,"username"=>$username,"email"=>$email,"contact"=>$contact,"ah"=>$ah,"dri"=>$dri,"address"=>$address);
+						$res=$this->update('customer',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='manage_user';
+							</script>";
+						}
+					}
+					
+				}	
+			
+			include_once('Edituser.php');
+			break;
+			
+			
+			case'/Editcontact':
+			if(isset($_REQUEST['edit_con_id']))
+			{
+				$con_id=$_REQUEST['edit_con_id'];
+				$where=array("con_id"=>$con_id);
+				$run=$this->select_where('contact',$where);
+			    $fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$con_id=$_REQUEST['con_id'];
+					$email=$_REQUEST['email'];
+					$name=$_REQUEST['name'];
+					$contact=$_REQUEST['contact'];
+	             	$arr=array("con_id"=>$con_id,"email"=>$email,"name"=>$name,"contact"=>$contact);
+					$res=$this->update('contact',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='manage_contact';
+							</script>";
+						}
+					}
+					
+				}	
+			
+			include_once('Editcontact.php');
+			break;
+			
+			case'/Editfeedback':
+			if(isset($_REQUEST['edit_feed_id']))
+			{
+				$feed_id=$_REQUEST['edit_feed_id'];
+				$where=array("feed_id"=>$feed_id);
+				$run=$this->select_where('feedback',$where);
+			    $fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$feed_id=$_REQUEST['feed_id'];
+					$com=$_REQUEST['com'];
+					$cus_id=$_REQUEST['cus_id'];
+	             	$arr=array("feed_id"=>$feed_id,"com"=>$com,"cus_id"=>$cus_id);
+					$res=$this->update('feedback',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='manage_feedback';
+							</script>";
+						}
+					}
+				}	
+			
+			include_once('Editfeedback.php');
+			break;
+			
+			case'/Editlocation':
+			if(isset($_REQUEST['edit_loc_id']))
+			{
+				$loc_id=$_REQUEST['edit_loc_id'];
+				$where=array("loc_id"=>$loc_id);
+				$run=$this->select_where('location',$where);
+			    $fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$loc_id=$_REQUEST['loc_id'];
+					$loc_name=$_REQUEST['loc_name'];
+	             	$arr=array("loc_id"=>$loc_id,"loc_name"=>$loc_name);
+					$res=$this->update('location',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='manage_location';
+							</script>";
+						}
+					}
+				}	
+			
+			include_once('Editlocation.php');
+			break;
+			
+			case'/Editbooking':
+			if(isset($_REQUEST['edit_book_id']))
+			{
+				$book_id=$_REQUEST['edit_book_id'];
+				$where=array("book_id"=>$book_id);
+				$run=$this->select_where('booking',$where);
+			    $fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$book_id=$_REQUEST['book_id'];
+					$cus_id=$_REQUEST['cus_id'];
+					$car_id=$_REQUEST['car_id'];
+					$book_date=$_REQUEST['book_date'];
+					$book_time=$_REQUEST['book_time'];
+	             	$arr=array("book_id"=>$book_id,"cus_id"=>$cus_id,"car_id"=>$car_id,"book_date"=>$book_date,"book_time"=>$book_time);
+					$res=$this->update('booking',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='manage_booking';
+							</script>";
+						}
+					}
+				}	
+			
+			include_once('Editbooking.php');
+			break;
+			
+			
+			case'/Editpayment':
+			if(isset($_REQUEST['edit_pay_id']))
+			{
+				$pay_id=$_REQUEST['edit_pay_id'];
+				$where=array("pay_id"=>$pay_id);
+				$run=$this->select_where('payment',$where);
+			    $fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$pay_id=$_REQUEST['pay_id'];
+					$pay_type=$_REQUEST['pay_type'];
+					$book_id=$_REQUEST['book_id'];
+					$cus_id=$_REQUEST['cus_id'];
+	             	$arr=array("pay_id"=>$pay_id,"pay_type"=>$pay_type,"book_id"=>$book_id,"cus_id"=>$cus_id);
+					$res=$this->update('payment',$arr,$where);
+						if($res)
+						{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='manage_payment';
+							</script>";
+						}
+					}
+				}	
+			
+			include_once('Editpayment.php');
+			break;
+			
+			
+		
+			
+		
+			
+		
 			
 			case '/delete':
 			

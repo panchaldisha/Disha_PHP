@@ -55,9 +55,8 @@ include_once('header.php');
 						<li class="active"><a href="index">Home <span class="sr-only">(current)</span></a></li>
 						<li><a href="about">About</a></li>
 						<li><a href="services">Services</a></li>
-						
 						<li><a href="gallery">Gallery</a></li>
-						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -65,20 +64,20 @@ include_once('header.php');
 				<ul class="rslides" id="slider3">
 					<li>
 						<div class="banner-info">
-							<h3>Aliquam ut mauris vestibulum, condimentum neque vitae nulla.</h3>
-							<p>Pellentesque congue libero accumsan porta.</p>
+							<h3></h3>
+							<p></p>
 						</div>
 					</li>
 					<li>
 						<div class="banner-info">
-							<h3>Nam et urna interdum blandit condimentum vivamus neque vitae.</h3>
-							<p>Sed eu quam ut orci ullamcorper tincidunt quam.</p>
+							<h3></h3>
+							<p></p>
 						</div>
 					</li>
 					<li>
 						<div class="banner-info">
-							<h3>Cras pretium metus sed justo condimentum, sed commodo nulla.</h3>
-							<p>Nulla eu sapien et eros finibus congue.</p>
+							<h3></h3>
+							<p></p>
 						</div>
 					</li>
 				</ul>
@@ -168,8 +167,8 @@ include_once('header.php');
 			<ul id="flexiselDemo3">
 				<li>
 					<div class="biseller-column">
-						<a href="#"><img src="images/pic6.jpg" alt=""/></a>
-						<h4>Donec lacinia</h4>
+						<a href="#"><img src="images/img.jpeg" alt=""/></a>
+						<h4>Maruti suzuki</h4>
 						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.
 							</p>
 						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
@@ -177,8 +176,8 @@ include_once('header.php');
 				</li>
 				<li>
 					<div class="biseller-column">
-						<a href="#"><img src="images/pic5.jpg" alt=""/></a>
-						<h4>Donec lacinia</h4>
+						<a href="#"><img src="images/img2.jpeg" alt=""/></a>
+						<h4>Mahindra scorpio</h4>
 						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.</p>
 						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
 					</div>
@@ -193,8 +192,8 @@ include_once('header.php');
 				</li>
 				<li>
 					<div class="biseller-column">
-						<a href="#"><img src="images/pic4.jpg" alt=""/></a>
-						<h4>Donec lacinia</h4>
+						<a href="#"><img src="images/img4.jpeg" alt=""/></a>
+						<h4>Toyota</h4>
 						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.</p>
 						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
 					</div>

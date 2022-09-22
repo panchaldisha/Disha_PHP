@@ -1,4 +1,15 @@
 <?php
+if(isset($_SESSION['employee']))
+{
+	
+}
+else
+{
+	echo "<script>
+	alert('Login Suceess');
+	window.location='dashboard';
+	</script>";
+}
 include_once('header.php');
 ?>
  
@@ -18,30 +29,35 @@ include_once('header.php');
 			<h3><i class="fa fa-user"></i>Profile</h3>
 			<div class="profile-bottom-top">
 			<div class="col-md-4 profile-bottom-img">
-				<img src="images/in15.jpg" alt="">
+				<img src="images/pic2.jpg" alt="">
 			</div>
 			<div class="col-md-8 profile-text">
-				<h6>panchal disha</h6>
+				<h6>Id : <?php echo $fetch->emp_id;?></h6>
 				<table>
-				<tr><td>Department</td>  
+				<tr><td>Name</td>  
 				<td>:</td>  
-				<td>Web Designer</td></tr>
+				<td><?php echo $fetch->name;?></td></tr>
+				
+				<tr><td>Username</td>  
+				<td>:</td>  
+				<td><?php echo $fetch->username;?></td></tr>
 				
 				<tr>
 				<td>Email</td>
 				<td> :</td>
-				<td><a href="info@gmail.com">info@lorem.com</a></td>
+				<td><?php echo $fetch->emailid;?></a></td>
 				</tr>
 				<tr>
-				<td>Skills</td>
+				<td>Address</td>
 				<td> :</td>
-				<td> HTML, CSS,Jqury, Bootstrap</td>
+				<td><?php echo $fetch->address;?></td>
 				</tr>
 				<tr>
-				<td>Country </td>
-				<td>:</td>
-				<td> United Arab Emirates</td>
+				<td>Contact</td>
+				<td> :</td>
+				<td><?php echo $fetch->contact;?></td>
 				</tr>
+				
 				</table>
 			</div>
 			<div class="clearfix"></div>

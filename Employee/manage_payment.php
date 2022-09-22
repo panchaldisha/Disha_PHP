@@ -42,7 +42,7 @@ include_once('header.php');
 						<td><?php echo $c->book_id;?></td>
 						<td><?php echo $c->cus_id;?></td>
 						
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
+						<td><a href="Editpayment?edit_pay_id=<?php echo $c->pay_id?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_pay_id=<?php echo $c->pay_id ?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					<?php

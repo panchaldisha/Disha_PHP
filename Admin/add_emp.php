@@ -61,6 +61,8 @@ function validate()
   	    
         <form name="empform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
          	<div class="vali-form">
+			
+			
             <div class="col-md-12 form-group1">
               <label class="control-label">Name</label>
               <input type="text" name="name" placeholder="name" >
@@ -78,12 +80,10 @@ function validate()
               <label class="control-label">Email id</label>
               <input type="text" name="emailid" placeholder="Email id" >
             </div>
-			
-			<div class="col-md-12 form-group1">
+			<div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Password</label>
-              <input type ="password" name="pass" placeholder="Password" >
+              <input type="password" name="pass" placeholder="password" >
             </div>
-			
 			
 			<div class="col-md-12 form-group1">
               <label class="control-label">Address</label>

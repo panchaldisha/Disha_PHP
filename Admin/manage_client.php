@@ -29,7 +29,8 @@ include_once('header.php');
 						<th>username</th>
 						<th>emailid</th>
 						<th>contact</th>
-						<th>ah</th>
+						<th>address</th>
+						<th>ad</th>
 						<th>dri</th>
 						<th>PUC</th>
 						<th>insu</th>
@@ -53,7 +54,7 @@ include_once('header.php');
 						<td><?php echo $c->dri;?></td>
 						<td><?php echo $c->puc;?></td>
 						<td><?php echo $c->insu;?></td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
+						<td><a href="Editclient?edit_client_id=<?php echo $c->client_id ?>"class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_client_id=<?php echo $c->client_id ?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					<?php

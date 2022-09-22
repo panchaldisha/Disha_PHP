@@ -1,5 +1,15 @@
 <?php
-
+if(isset($_SESSION['email']))
+{
+	
+}
+else
+{
+	echo "<script>
+	alert('Login Suceess');
+	window.location='dashboard';
+	</script>";
+}
 include_once('header.php');
 ?>
  
@@ -22,12 +32,12 @@ include_once('header.php');
 				<img src="images/pic.jpg" alt="">
 			</div>
 			<div class="col-md-8 profile-text">
-				<h6>Id:</h6>
+				<h6>Id:<?php echo $fetch->admin_id;?> </h6>
 				<table>
 				<tr><td>Username</td>  
 				<td>:</td>  
-				<td>username</td></tr>
-				
+				<td><?php echo $fetch->user_name;?></td>
+				</tr>
 				<tr>
 				<td>Email</td>
 				<td> :</td>
@@ -45,7 +55,7 @@ include_once('header.php');
 				</tr>
 				</table>
 			</div>
-			<div class="clearfix"></div>
+			
 			</div>
 			<div class="profile-bottom-bottom">
 			<div class="col-md-4 profile-fo">

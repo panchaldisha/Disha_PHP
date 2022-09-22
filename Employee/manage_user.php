@@ -44,13 +44,13 @@ include_once('header.php');
 						<td><?php echo $c->cus_id;?></td>
 						<td><?php echo $c->name;?></td>
 						<td><?php echo $c->username;?></td>
-						<td><?php echo $c->pass;?></td>
 						<td><?php echo $c->email;?></td>
 						<td><?php echo $c->contact;?></td>
 						<td><?php echo $c->ah;?></td>
 						<td><?php echo $c->dri;?></td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="delete?del_cus_id=<?php echo $c->cus_id ?>" class="btn btn-danger">Delete</a></td>
+						<td><?php echo $c->address;?></td>
+						<td><a href="Edituser?edit_cus_id=<?php echo $c->cus_id;?>" class="btn btn-primary">Edit</a></td>
+						<td><a href="delete?del_cus_id=<?php echo $c->cus_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					  <?php
 					  }

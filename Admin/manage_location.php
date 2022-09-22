@@ -37,7 +37,7 @@ include_once('header.php');
 					  <tr>
 			            <td><?php echo $c->loc_id;?></td>
 						<td><?php echo $c->loc_name;?></td>
-					    <td><a href="#" class="btn btn-primary">Edit</a></td>
+					    <td><a href="Editlocation?edit_loc_id=<?php echo $c->loc_id?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_loc_id=<?php echo $c->loc_id ?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					<?php

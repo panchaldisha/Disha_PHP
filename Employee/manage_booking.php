@@ -43,7 +43,7 @@ include_once('header.php');
 						<td><?php echo $c->car_id;?></td>
 						<td><?php echo $c->book_date;?></td>
 						<td><?php echo $c->book_time;?></td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
+						<td><a href="Editbooking?edit_book_id=<?php echo $c->book_id?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_book_id=<?php echo $c->book_id ?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					  <?php

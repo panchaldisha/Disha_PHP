@@ -1,4 +1,3 @@
-
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -20,6 +19,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/font-awesome.css" rel="stylesheet"> 
 <script src="js/jquery.min.js"> </script>
 <script src="js/bootstrap.min.js"> </script>
+<script>
+function validate()
+{
+	var username=document.forms["indexform"]["username"].value;
+	if(username=="" || username==null)
+	{
+		alert("Please fill out the user name");
+		return false;
+	}
+	var pass=document.forms["indexform"]["pass"].value;
+	if(pass==""||pass==null)
+	{
+		alert("please fill out the password");
+		return false;
+	}
+	
+}
+</script>
 </head>
 <body>
 	<div class="login">
@@ -27,14 +44,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<h1><a href="index">Employee Login  </a></h1>
 		<div class="login-bottom">
 			<h2>Login</h2>
-			<form action="" method="post" enctype="multipat/form-data">
+			<form  name="indexform" action="" method="post" enctype="multipat/form-data" onsubmit="return validate()">
 			<div class="col-md-12">
 				<div class="login-mail">
-					<input type="text" placeholder="Username" name="username" required="">
+					<input type="text" placeholder="Username" name="username" >
 					<i class="fa fa-envelope"></i>
 				</div>
 				<div class="login-mail">
-					<input type="password" placeholder="Password" name="pass" required="">
+					<input type="password" placeholder="Password" name="pass" >
 					<i class="fa fa-lock"></i>
 				</div>
 				   <a class="news-letter " href="#">
