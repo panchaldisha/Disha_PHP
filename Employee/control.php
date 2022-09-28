@@ -93,7 +93,7 @@ class control extends model
 				$cat_des=$_REQUEST['cat_des'];
 				
 				$cat_img=$_FILES['cat_img']['name'];
-				$path='pic/'.$cat_img;
+				$path='../web/pic/'.$cat_img;
 				$dup_file=$_FILES['cat_img']['tmp_name'];
 				move_uploaded_file($dup_file,$path);
 				
@@ -242,6 +242,111 @@ class control extends model
 			include_once('Edituser.php');
 			break;
 			
+			case '/Editcartype':
+			if(isset($_REQUEST['edit_cat_id']))
+			{
+				$cat_id=$_REQUEST['edit_cat_id'];
+				$where=array("cat_id"=>$cat_id);
+				$run=$this->select_where('category',$where);
+				$fetch=$run->fetch_object();
+				$old_file=$fetch->cat_img;
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$cat_id=$_REQUEST['cat_id'];
+					$cat_name=$_REQUEST['cat_name'];
+					$cat_des=$_REQUEST['cat_des'];
+					
+					if($_FILES['cat_img']['size']>0)
+					{
+						$cat_img=$_FILES['cat_img']['name'];
+						$path='../web/pic/'.$cat_img;
+						$dup_file=$_FILES['cat_img']['tmp_name'];
+						move_uploaded_file($dup_file,$path);
+						
+						$arr=array("cat_id"=>$cat_id,"cat_name"=>$cat_name,"cat_des"=>$cat_des,"cat_img"=>$cat_img);
+						$res=$this->update('category',$arr,$where);
+						if($res)
+						{
+							unlink('../web/pic/'.$old_file);
+							echo "<script>
+							alert('Update success');
+							window.location='manage_cartype';
+							</script>";
+						}
+					}
+					else
+					{
+						$arr=array("cat_id"=>$cat_id,"cat_name"=>$cat_name,"cat_des"=>$cat_des,"cat_img"=>$cat_img);
+						$res=$this->update('category',$arr,$where);
+						if($res)
+						{
+							echo "<script>
+							alert('Update success');
+							window.location='manage_cartype';
+							</script>";
+						}
+				    }
+				}
+			}
+			include_once('Editcartype.php');
+			break;
+			case '/Editcar':
+			if(isset($_REQUEST['edit_car_id']))
+			{
+				$car_id=$_REQUEST['edit_car_id'];
+				$where=array("car_id"=>$car_id);
+				$run=$this->select_where('car',$where);
+				$fetch=$run->fetch_object();
+				$old_file=$fetch->img;
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$car_id=$_REQUEST['car_id'];
+					$client_id=$_REQUEST['client_id'];
+					$name=$_REQUEST['name'];
+					$des=$_REQUEST['des'];
+					$capacity=$_REQUEST['capacity'];
+					$mileage=$_REQUEST['mileage'];
+					$price=$_REQUEST['price'];
+					$type=$_REQUEST['type'];
+					$fuel_type=$_REQUEST['fuel_type'];
+					if($_FILES['img']['size']>0)
+					{
+						$img=$_FILES['img']['name'];
+						$path='../web/pic/car/'.$img;
+						$dup_file=$_FILES['img']['tmp_name'];
+						move_uploaded_file($dup_file,$path);
+						
+						$arr=array("car_id"=>$car_id,"client_id"=>$client_id,"name"=>$name,"des"=>$des,"capacity"=>$capacity,"mileage"=>$mileage,"price"=>$price,"type"=>$type,"fuel_type"=>$fuel_type,"img"=>$img);
+						$res=$this->update('car',$arr,$where);
+						if($res)
+						{
+							unlink('../web/pic/car/'.$old_file);
+							echo "<script>
+							alert('Update success');
+							window.location='manage_car';
+							</script>";
+						}
+					}
+					else
+					{
+						$arr=array("car_id"=>$car_id,"client_id"=>$client_id,"name"=>$name,"des"=>$des,"capacity"=>capacity,"maileage"=>maileage,"price"=>$price,"type"=>$type,"fuel_type"=>$fuel_type,"img"=>$img);
+						$res=$this->update('car',$arr,$where);
+						if($res)
+						{
+							echo "<script>
+					        alert('Update success');
+							window.location='manage_car';
+							</script>";
+						}
+					}
+				}
+			}
+			include_once('Editcar.php');
+			break;
+			
+			
 			
 			case '/delete':
 			
@@ -284,7 +389,7 @@ class control extends model
 				$res=$this->delete_where('category',$where);
 				if($res) 
 				{
-					unlink('pic/'.$cat_img);
+					unlink('../web/pic/'.$cat_img);
 					echo "<script> 
 						alert('Delete Success') 
 						window.location='manage_cartype';
@@ -322,9 +427,17 @@ class control extends model
 			{
 				$car_id=$_REQUEST['del_car_id'];
 				$where=array("car_id"=>$car_id);
+				
+				$run=$this->select_where('car',$where);
+				$fetch=$run->fetch_object();
+				$cat_img=$fetch->cat_img;
+				
+				
 				$res=$this->delete_where('car',$where);
 				if($res) 
 				{
+					
+					unlink('..web/pic/car'.$img);
 					echo "<script> 
 						alert('Delete Success') 
 						window.location='manage_car';

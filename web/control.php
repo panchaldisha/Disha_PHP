@@ -45,32 +45,84 @@ class control extends model
 							window.location='profile';
 							</script>";
 						}
-					}
+				}
 					
-				}	
+			}	
 			
 			include_once('editprofile.php');
 			break;
 		
 			case '/index':
+			$fetcharr=$this->selectall('car');
 			include_once('index.php');
 			break;
 			
-			case '/about':
-			include_once('about.php');
+			case '/category':
+			include_once('category.php');
 			break;
     
 	
 			case '/contact':
+			if(isset($_REQUEST['submit']))
+			{
+				$email=$_REQUEST['email'];
+				$name=$_REQUEST['name'];
+				$contact=$_REQUEST['contact'];
+				$message=$_REQUEST['message'];
+				
+				$arr=array("email"=>$email,"name"=>$name,"contact"=>$contact,"message"=>$message);
+				$res=$this->insert('contact',$arr);
+				
+				if($res)
+				{
+					echo "<script>
+					alert('Inquiry Success');
+					</script>";
+				}
+				else
+				{
+					echo "Inquiry not success";
+				}
+			}	
 			include_once('contact.php');
 			break;
 			
-			case '/gallery':
-			include_once('gallery.php');
+			case '/cars':
+			$fetcharr=$this->selectall('car');
+			include_once('cars.php');
 			break;
 			
-			case '/services':
-			include_once('services.php');
+			case '/booking':
+			include_once('booking.php');
+			break;
+			
+			case '/addform':
+			if(isset($_REQUEST['submit']))
+			{
+				$name=$_REQUEST['name'];
+				$description=$_REQUEST['des'];
+				$capacity=$_REQUEST['capacity'];
+				$mileage=$_REQUEST['mileage'];
+				$price=$_REQUEST['price'];
+				$type=$_REQUEST['type'];
+				$fule_type=$_REQUEST['fule_type'];
+				$img=$_REQUEST['img'];
+				
+				
+				
+				
+				
+				$arr=array("name"=>$name,"des"=>$des,"capacity"=>$capacity,"mileage"=>$mileage,"price"=>$price,"type"=>$type,"fule_type"=>$fule_type,"img"=>$img);
+				$res=$this->insert('contact',$arr);
+				
+				{
+							echo "<script> 
+							alert('Update Success'); 
+							window.location='profile';
+							</script>";
+				}
+			}	
+			include_once('addform.php');
 			break;
 			
 			case '/signup':

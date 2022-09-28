@@ -41,6 +41,10 @@ include_once('header.php');
 				
 				<div class="clearfix"></div>
 			</div>
+			<?php
+			if(isset($_SESSION['username']))
+			{
+			?>
 			<nav class="navbar navbar-default">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -53,13 +57,39 @@ include_once('header.php');
 			   <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="index">Home <span class="sr-only">(current)</span></a></li>
-						<li><a href="about">About</a></li>
-						<li><a href="services">Services</a></li>
-						<li><a href="gallery">Gallery</a></li>
+						<li><a href="category">Categories</a></li>
+						<li><a href="booking">Booking</a></li>
+						<li><a href="addform">Add car</a></li>
+						<li><a href="cars">Available cars</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
 			</nav>
+			<?php
+			}
+			else
+			{	
+			?>
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					  </button>
+				</div>
+			   <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index">Home <span class="sr-only">(current)</span></a></li>
+						<li><a href="categories">categories</a></li>
+						<li><a href="contact">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+			<?php
+			}
+			?>
 			<div id="top" class="callbacks_container">
 				<ul class="rslides" id="slider3">
 					<li>
