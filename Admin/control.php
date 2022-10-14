@@ -544,16 +544,7 @@ class control extends model
 			include_once('Editpayment.php');
 			break;
 			
-			
-		
-			
-		
-			
-		
-			
 			case '/delete':
-			
-			
 			if(isset($_REQUEST['del_cus_id']))
 			{
 				$cus_id=$_REQUEST['del_cus_id'];
@@ -641,9 +632,15 @@ class control extends model
 			{
 				$cat_id=$_REQUEST['del_cat_id'];
 				$where=array("cat_id"=>$cat_id);
+				
+				$run=$this->select_where('category',$where);
+				$fetch=$run->fetch_object();
+				$cat_img=$fetch->cat_img;
+				
 				$res=$this->delete_where('category',$where);
 				if($res) 
 				{
+					unlink('../web/pic/'.$cat_img);
 					echo "<script> 
 						alert('Delete Success') 
 						window.location='manage_cartype';
@@ -680,9 +677,16 @@ class control extends model
 			{
 				$car_id=$_REQUEST['del_car_id'];
 				$where=array("car_id"=>$car_id);
+				
+				
+				$run=$this->select_where('car',$where);
+				$fetch=$run->fetch_object();
+				$cat_img=$fetch->cat_img;
+				
 				$res=$this->delete_where('car',$where);
 				if($res) 
 				{
+					unlink('..web/pic/car'.$img);
 					echo "<script> 
 						alert('Delete Success') 
 						window.location='manage_car';

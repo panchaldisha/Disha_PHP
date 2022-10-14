@@ -50,7 +50,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<input type="text" name="contact" required=""> 
 						<label>Contact</label>
 						<span></span>
-					</div> 
+					</div>
+					<div class="styled-input w3ls-text">
+						<input type="text" name="ah" required=""> 
+						<label>Adhar card No</label>
+						<span></span>
+					</div>
+					<div class="styled-input w3ls-text">
+						<input type="text" name="dri" required=""> 
+						<label>Driving licence No</label>
+						<span></span>
+					</div>
 					<div class="styled-input w3ls-text">
 						<input type="text" name="address" required=""> 
 						<label>Address</label>

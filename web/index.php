@@ -8,7 +8,7 @@ include_once('header.php');
 		<div class="container">
 			<div class="header">
 				<div class="logo">
-					<h1><a href="index"><img src="images/car.png" alt=""/>AUTO <span>CARS</span></a></h1>
+					<h1><a href="index"><img src="images/car.png"  alt=""/>RENT A <span>CARS</span></a></h1>
 				</div>
 				<div class="top_details">
 				<ul>
@@ -82,7 +82,7 @@ include_once('header.php');
 			   <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="index">Home <span class="sr-only">(current)</span></a></li>
-						<li><a href="categories">categories</a></li>
+						<li><a href="category">categories</a></li>
 						<li><a href="contact">Contact</a></li>
 					</ul>
 				</div>
@@ -91,26 +91,27 @@ include_once('header.php');
 			}
 			?>
 			<div id="top" class="callbacks_container">
-				<ul class="rslides" id="slider3">
-					<li>
-						<div class="banner-info">
-							<h3></h3>
-							<p></p>
-						</div>
-					</li>
-					<li>
-						<div class="banner-info">
-							<h3></h3>
-							<p></p>
-						</div>
-					</li>
-					<li>
-						<div class="banner-info">
-							<h3></h3>
-							<p></p>
-						</div>
-					</li>
-				</ul>
+				<form action="" method="post" enctype="multipart/form-data">
+				<div class="col-md-4">
+				<label style="color:#f66c53">Pickup Location</label>
+				<input type="text" class="form-control">
+				</div>
+				<div class="col-md-4">
+				<label style="color:#f66c53">Drop Location</label>
+				<input type="text" class="form-control">
+				</div>
+				<div class="col-md-4">
+				<label style="color:#f66c53">Pickup Date & Time</label>
+				<input type="datetime-local" class="form-control">
+				</div>
+				<div class="col-md-4"><br>
+				<label style="color:#f66c53">Drop Date & Time</label>
+				<input type="datetime-local" class="form-control">
+				</div>
+				<div class="col-md-4"><br>
+				<input type="button" style="background-color:#f66c53;color:black;margin-top:27px;" value="Search" class="btn btn-basic">
+				</div>
+				</form>
 			</div>
 		</div>
 	</div>

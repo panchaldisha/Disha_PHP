@@ -60,17 +60,40 @@ class control extends model
 			case '/category':
 			include_once('category.php');
 			break;
+			
+			case '/show':
+			if(isset($_REQUEST['cat_name']))
+			{
+				$cat_name=$_REQUEST['cat_name'];
+				$where=array('cat_name'=>$cat_name);
+				$run=$this->select_where('category',$where);
+				$fetch=$run->fetch_object();
+				if(isset($_REQUEST['submit']))
+				{
+					$cat_name=$_REQUEST['cat_name'];
+					$des=$_REQUEST['des'];
+					$arr=array("cat_name"=>$cat_name,"des"=>$des);
+					$res=$this->selectall('car',$arr,$where);
+					if($res)
+					{
+						echo "<script>welcome</script>";
+					
+					}
+				}
+			}
+			include_once('cars.php');
+			break;
     
 	
 			case '/contact':
 			if(isset($_REQUEST['submit']))
 			{
-				$email=$_REQUEST['email'];
 				$name=$_REQUEST['name'];
+				$email=$_REQUEST['email'];
 				$contact=$_REQUEST['contact'];
 				$message=$_REQUEST['message'];
 				
-				$arr=array("email"=>$email,"name"=>$name,"contact"=>$contact,"message"=>$message);
+				$arr=array("name"=>$name,"email"=>$email,"contact"=>$contact,"message"=>$message);
 				$res=$this->insert('contact',$arr);
 				
 				if($res)
@@ -81,7 +104,10 @@ class control extends model
 				}
 				else
 				{
-					echo "Inquiry not success";
+					echo "<script>
+					alert('Inquiry not success');
+					</script>";
+					
 				}
 			}	
 			include_once('contact.php');
@@ -109,16 +135,13 @@ class control extends model
 				$img=$_REQUEST['img'];
 				
 				
-				
-				
-				
 				$arr=array("name"=>$name,"des"=>$des,"capacity"=>$capacity,"mileage"=>$mileage,"price"=>$price,"type"=>$type,"fule_type"=>$fule_type,"img"=>$img);
 				$res=$this->insert('contact',$arr);
 				
 				{
 							echo "<script> 
 							alert('Update Success'); 
-							window.location='profile';
+							window.location='dashboard';
 							</script>";
 				}
 			}	
@@ -133,16 +156,18 @@ class control extends model
 				$password=$_REQUEST['pass'];
 				$pass=md5($password);
 				$email=$_REQUEST['email'];
-				$address=$_REQUEST['address'];
 				$contact=$_REQUEST['contact'];
-	
-			
-				$arr=array("name"=>$name,"username"=>$username,"pass"=>$pass,"email"=>$email,"address"=>$address,"contact"=>$contact);
+	            $ah=$_REQUEST['ah'];
+				$dri=$_REQUEST['dri'];
+			    $address=$_REQUEST['address'];
 				
+				
+				$arr=array("name"=>$name,"username"=>$username,"pass"=>$pass,"email"=>$email,"contact"=>$contact,"ah"=>$ah,"dri"=>$dri,"address"=>$address);
 				$res=$this->insert('customer',$arr);
 				if($res)
 				{
 					echo "<script> 
+					
 					alert('Register Success') 
 					window.location='index';
 					</script>";				

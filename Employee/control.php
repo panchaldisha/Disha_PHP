@@ -241,7 +241,8 @@ class control extends model
 			
 			include_once('Edituser.php');
 			break;
-			
+
+
 			case '/Editcartype':
 			if(isset($_REQUEST['edit_cat_id']))
 			{
@@ -444,6 +445,42 @@ class control extends model
 						</script>";
 				}
 			}
+			
+			case "/status":
+			if(isset($_REQUEST['status_cus_id']))
+			{
+				$cus_id=$_REQUEST['status_cus_id'];
+				$where=array("cus_id"=>$cus_id);
+				$run=$this->select_where('customer',$where);
+				$fetch=$run->fetch_object();
+				$status=$fetch->status;
+				if($status=="Block")
+				{
+					$arr=array("status"=>"Unblock");
+					$res=$this->update('customer',$arr,$where);
+					if($res)
+					{
+						echo "<script>
+						alert('Unblock success')
+						window.location='manage_user';
+						</script>";
+					}
+				}
+				else
+				{
+					$arr=array("status"=>"Block");
+					$res=$this->update('customer',$arr,$where);
+					if($res)
+					{
+						unset ($_SESSION['user_name']);
+						echo "<script>
+						alert('Block success')
+						window.location='manage_user';
+						</script>";
+					}
+				}
+			}
+			
 
 			
 

@@ -79,8 +79,8 @@ include_once('header.php')
 				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="index">Home <span class="sr-only">(current)</span></a></li>
-						<li><a href="categories">categories</a></li>
-						<li><a href="contact">Contact</a></li>
+						<li><a href="category">categories</a></li>
+						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -95,89 +95,57 @@ include_once('header.php')
 			<h2>Services</h2>
 			<ol class="breadcrumb">
 				<li><a href="index">Home</a></li>
-				<li class="active">Services</li>
+				<li class="active">Booking</li>
 			</ol>
-			<div class="section group sec_group">
-				<div class="col-md-6 service_sec">
-					<div class="listimg listimg_2_of_1">
-						<img src="images/service-6.png" alt="" />
-					</div>
-					<div class="text list_2_of_1">
-						<h3>Live Support</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.Lorem
-							ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit
-							amet, consectetur adipisicing elit, sed do eiusmod tempor labore.</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="col-md-6 service_sec ">
-					<div class="listimg listimg_2_of_1">
-						<img src="images/service-2.png" alt="" />
-					</div>
-					<div class="text list_2_of_1">
-						<h3>Repair Services</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.Lorem
-							ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit
-							amet, consectetur adipisicing elit, sed do eiusmod tempor labore.</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
+			<form name="clientform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+         	<div class="vali-form">
+            <div class="col-md-12 form-group1">
+              <label class="control-label">Booking ID</label>
+              <input type="text" class="form-control" name="book_id" placeholder="Booking ID">
+            </div>
+            <div class="clearfix"> </div>
+            </div>
+            
+			<div class="col-md-12 form-group1"><br>
+              <label class="control-label">Cus ID</label>
+              <input type="text" class="form-control" name="cus_id" placeholder="Customer ID">
+            </div>
+            <div class="clearfix"> </div>
+			
+            <div class="col-md-12 form-group1 group-mail"><br>
+              <label class="control-label">Car ID</label>
+              <input type="text" class="form-control" name="car_id" placeholder="Car id">
+            </div>
+             <div class="clearfix"> </div>
+			 
+			<div class="col-md-12 form-group1 group-mail"><br>
+              <label class="control-label">Booking date</label>
+              <input type="text" class="form-control" name="book_date" placeholder="Booking date"><br>
+            </div>
+             <div class="clearfix"> </div>
+			 
+            
+            <div class="col-md-12 form-group1"><br>
+              <label class="control-label">Booking time</label>
+              <input type="text" class="form-control" name="book_time" placeholder="Booking Time">
+            </div>
+            <div class="clearfix"> </div>
+            
+			
+			
+            <div class="clearfix"> </div>
+             <div class="clearfix"> </div>
+             <div class="clearfix"> </div>
+          
+            <div class="col-md-12 form-group"><br>
+              <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+              <button type="reset" name="reset" class="btn btn-default">Reset</button>
+            </div>
+          <div class="clearfix"> </div>
+        </form>
+			
 				<div class="clearfix"></div>
-			</div>
-			<div class="section group sec_group">
-				<div class="col-md-6 service_sec">
-					<div class="listimg listimg_2_of_1">
-						<img src="images/service-3.png" alt="" />
-					</div>
-					<div class="text list_2_of_1">
-						<h3>Complete Care</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.Lorem
-							ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit
-							amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="col-md-6 service_sec">
-					<div class="listimg listimg_2_of_1">
-						<img src="images/service-4.png" alt="" />
-					</div>
-					<div class="text list_2_of_1">
-						<h3>Spare Parts</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.Lorem
-							ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit
-							amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div class="section group sec_group">
-				<div class="col-md-6 service_sec">
-					<div class="listimg listimg_2_of_1">
-						<img src="images/service-5.png" alt="" />
-					</div>
-					<div class="text list_2_of_1">
-						<h3>Sales Services</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.Lorem
-							ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit
-							amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="col-md-6 service_sec">
-					<div class="listimg listimg_2_of_1">
-						<img src="images/service-1.png" alt="" />
-					</div>
-					<div class="text list_2_of_1">
-						<h3>Tyre Services</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.Lorem
-							ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit
-							amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
+			
 		</div>
 	</div>
 	<!---->

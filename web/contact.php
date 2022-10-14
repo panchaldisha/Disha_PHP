@@ -80,8 +80,8 @@ include_once('header.php');
 				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="index">Home <span class="sr-only">(current)</span></a></li>
-						<li><a href="categories">categories</a></li>
-						<li class="active"><a href="contact.html">Contact Us</a></li>
+						<li><a href="category">categories</a></li>
+						<li class="active"><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -118,9 +118,9 @@ include_once('header.php');
 						</div>
 					</div>
 					<div class="col-md-9 contact-left">
-						<form>
-							<input type="text" name="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" />
-							<input type="text" name="name" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" />
+						<form action=""   method="post" enctype="multipart/form-data">
+							<input type="text" name="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" />
+							<input type="text" name="name" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" />
 							<input type="text" name="contact" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}" />
 							<textarea name="message" value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
 							<div class="submit-btn">

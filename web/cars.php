@@ -79,7 +79,7 @@ include_once('header.php');
 				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="index">Home <span class="sr-only">(current)</span></a></li>
-						<li><a href="categories">categories</a></li>
+						<li><a href="category">categories</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
@@ -98,7 +98,7 @@ include_once('header.php');
 				<h2>Our Gallery</h2>
 				<ol class="breadcrumb">
 					<li><a href="index">Home</a></li>
-					<li class="active">Gallery</li>
+					<li class="active">Cars</li>
 				</ol>
 			</div>
 			<div class="gallery-bottom">

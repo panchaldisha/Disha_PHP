@@ -23,10 +23,10 @@ include_once('header.php');
 				  <table class="table">
 					<thead>
 					  <tr>
-					    <th>car_id</th>
-						<th>car_name</th>
-						<th>car_des</th>
-						<th>car_img</th>
+					    <th>cat_id</th>
+						<th>cat_name</th>
+						<th>cat_des</th>
+						<th>cat_img</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
@@ -36,18 +36,20 @@ include_once('header.php');
 					foreach($cartype_arr as $c)
 					{
 					?>	
+					
 					  <tr>
 					    <td><?php echo $c->cat_id;?></td>
 						<td><?php echo $c->cat_name;?></td>
 						<td><?php echo $c->cat_des;?></td>
-						<td><?php echo $c->cat_img;?></td>
-						
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
+						<td><img src="../web/pic/<?php echo $c->cat_img;?>" width="50px" height="40px"> </td>
+						<td><a href="Editcartype?edit_cat_id=<?php echo $c->cat_id?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_cat_id=<?php echo $c->cat_id ?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					<?php
-					}
-					?>
+					  <?php
+					  }
+					  ?>
+					
+					
 					  
 					</tbody>
 				  </table>

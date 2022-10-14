@@ -1,3 +1,4 @@
+<!---->
 <div class="footer2">
 		<div class="container">
 			<div class="ftr2-grids">
