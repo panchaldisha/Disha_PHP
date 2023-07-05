@@ -1,5 +1,3 @@
-
-	
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -72,6 +70,6 @@ function validate()
 			</form>
 		</div>
 	</div>
-	<?php
+<?php
 include_once('footer.php');
 ?>

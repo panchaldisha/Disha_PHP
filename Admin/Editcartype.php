@@ -48,7 +48,7 @@ function validate()
  		<div class="validation-form">
  	<!---->
   	    
-        <form name="contactform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+        <form name="cartypeform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
               <label class="control-label">Cat_id</label>

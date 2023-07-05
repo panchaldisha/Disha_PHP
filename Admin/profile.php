@@ -1,12 +1,11 @@
 <?php
-if(isset($_SESSION['email']))
+if(isset($_SESSION['admin']))
 {
 	
 }
 else
 {
 	echo "<script>
-	alert('Login Suceess');
 	window.location='dashboard';
 	</script>";
 }

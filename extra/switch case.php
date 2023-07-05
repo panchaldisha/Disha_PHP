@@ -1,5 +1,4 @@
 <?php
-
 switch(40)
 {
     case 10:

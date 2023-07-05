@@ -1,5 +1,5 @@
 <?php
-include_once('../admin/model.php');
+include_once('model.php');
 class control extends model
 {
 	function __construct()
@@ -53,8 +53,9 @@ class control extends model
 				   window.location='index';
 				   </script>";
 				   
+				   
 			case '/profile':
-			$where=array("email"=>$_SESSION['email']);
+			$where=array("email"=>$_SESSION['admin']);
 			$run=$this->select_where('admin',$where);
 			$fetch=$run->fetch_object();
 			include_once('profile.php');

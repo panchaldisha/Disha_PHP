@@ -1,34 +1,34 @@
 <?php
-	include_once('header.php');
+include_once('header.php');
 ?>
-
 <body>
 	<!-- banner -->
 	<div class="banner banner2">
 		<div class="container">
 			<div class="header">
 				<div class="logo">
-					<h1><a href="index"><img src="images/car.png" alt=""/>RENT<span>MY</span> <span>gallery</span></a></h1>
+					<h1><a href="index"><img src="images/car.png" alt=""/>AUTO <span>CARS</span></a></h1>
 				</div>
 				<div class="top_details">
-				<ul>
-					<?php
-					if(isset($_SESSION['user_name']))
-					{
-					?>
-					<button class="btn btn-light"><a href="logout">Logout</a></button>
-					<button class="btn btn-light"><a href="profile">My profile</a></button>
+					<ul>
+				    <?php
+					if(isset($_SESSION['username'])) 
+				    {
+                    ?>
+					<button class="btn btn-light"><a href="logout">logout</a></button>
+					<button class="btn btn-light"><a href="signup">profile</a></button>
 					<?php
 					}
 					else
 					{
 					?>
-					<button class="btn btn-light"><a href="login">Login</a></button>
-					<button class="btn btn-light"><a href="signup">Signup</a></button>
+					
+					<button class="btn btn-light"><a href="login">login</a></button>
+					<button class="btn btn-light"><a href="signup">signup</a></button>
 					<?php
 					}
 					?>
-				</ul><br>
+					</ul>
 					<div class="search">
 						<form>
 							<input type="text" value="" placeholder="Search Location">
@@ -36,10 +36,11 @@
 						</form>
 					</div>
 				</div>
+					
 				<div class="clearfix"></div>
 			</div>
-			<?php 
-			if(isset($_SESSION['user_name']))
+			<?php
+			if(isset($_SESSION['username']))
 			{
 			?>
 			<nav class="navbar navbar-default">
@@ -54,8 +55,9 @@
 				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="index">Home <span class="sr-only">(current)</span></a></li>
-						<li class="active"><a href="category">Categories</a></li>
+						<li><a href="category">Category</a></li>
 						<li><a href="booking">Booking</a></li>
+						<li><a href="addform">Add car</a></li>
 						<li><a href="cars">Available cars</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
@@ -65,7 +67,7 @@
 			}
 			else
 			{
-			?>
+		    ?>
 			<nav class="navbar navbar-default">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -78,14 +80,16 @@
 				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="index">Home <span class="sr-only">(current)</span></a></li>
-						<li class="active"><a href="category">Categories</a></li>
-						<li><a href="contact">Contact Us</a></li>
+						<li><a href="categories">categories</a></li>
+						<li><a href="contact">Contact</a></li>
 					</ul>
 				</div>
 			</nav>
 			<?php
 			}
 			?>
+				
+			
 		</div>
 	</div>
 	<!---->
@@ -214,6 +218,7 @@
 
 	</div>
 	</div>
-<?php
-	include_once('footer.php')
-?>
+	<!---->
+	<?php
+	include_once('footer.php');
+	?>
